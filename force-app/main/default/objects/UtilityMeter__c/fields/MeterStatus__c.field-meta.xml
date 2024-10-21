@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MeterStatus__c</fullName>
+    <description>The status of the meter.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The status of the meter.</inlineHelpText>
+    <label>Meter Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CURRENT</fullName>
+                <default>false</default>
+                <label>Current</label>
+            </value>
+            <value>
+                <fullName>NOT_CURRENT</fullName>
+                <default>false</default>
+                <label>Not Current</label>
+            </value>
+            <value>
+                <fullName>INACTIVE</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>FIX</fullName>
+                <default>false</default>
+                <label>Fix</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

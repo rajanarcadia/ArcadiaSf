@@ -1,0 +1,9 @@
+{
+  "status": 400,
+  "message": "Account with id 1234abcd-123a-123 not found",
+  "error": "Bad request",
+  "exception": null,
+  "path": "/api/public/v1/accounts/1234abcd-123a-123/statements",
+  "timestamp": "2022-05-01T23:58:58.084+00:00",
+  "data": null
+}

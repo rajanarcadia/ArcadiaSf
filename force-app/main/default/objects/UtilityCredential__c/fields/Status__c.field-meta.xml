@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description
+    >Credential-level statuses that let you know if there are any issues accessing the provider portal, the data, or with the credential itself.</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+    >Credential-level statuses that let you know if there are any issues accessing the provider portal, the data, or with the credential itself.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>OK</label>
+            </value>
+            <value>
+                <fullName>PENDING</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>SENT_TO_URJANET</fullName>
+                <default>false</default>
+                <label>Sent To Arcadia</label>
+            </value>
+            <value>
+                <fullName>ACTION_REQUIRED</fullName>
+                <default>false</default>
+                <label>Action Required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Custom Metadata used to store the Deleter class name to be used for each service type</description>
+    <label>Utility Meter Usage Deleter Setting</label>
+    <pluralLabel>Utility Meter Usage Deleter Settings</pluralLabel>
+    <visibility>Protected</visibility>
+</CustomObject>

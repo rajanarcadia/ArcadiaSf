@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StreetLine1__c</fullName>
+    <description>The first street line of the service address for this site</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The first street line of the service address for this site</inlineHelpText>
+    <label>Street Line 1</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

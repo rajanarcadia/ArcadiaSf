@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IndustriesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableSCAssignFootprint>true</enableSCAssignFootprint>
+    <enableSCBEIEnabled>true</enableSCBEIEnabled>
+    <enableSCDGF>true</enableSCDGF>
+    <enableSCCarbonAccounting>true</enableSCCarbonAccounting>
+    <enableSCCreateFootprint>true</enableSCCreateFootprint>
+    <enableSCScope3HubEnabled>true</enableSCScope3HubEnabled>
+    <enableSCEmssnsForecasting>true</enableSCEmssnsForecasting>
+    <enableSCTargetSetting>true</enableSCTargetSetting>
+    <enableSCExternalEngMgmt>true</enableSCExternalEngMgmt>
+    <enableSCWasteManagement>true</enableSCWasteManagement>
+    <enableSustainabilityCloud>true</enableSustainabilityCloud>
+</IndustriesSettings>

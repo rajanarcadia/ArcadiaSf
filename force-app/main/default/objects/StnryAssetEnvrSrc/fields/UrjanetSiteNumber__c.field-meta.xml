@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UrjanetSiteNumber__c</fullName>
+    <description
+    >A custom field to store the Site Number field from Arcadia. This is an optional custom field in the Arcadia system.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The site number as entered in the optional custom field in the Arcadia system.</inlineHelpText>
+    <label>Arcadia Site Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

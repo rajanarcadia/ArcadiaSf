@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StatusDetail__c</fullName>
+    <description>A detailed status for the credential.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A detailed status for the credential.</inlineHelpText>
+    <label>Status Detail</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>OK</label>
+            </value>
+            <value>
+                <fullName>PENDING</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>ACTION_REQUIRED</fullName>
+                <default>false</default>
+                <label>Action Required</label>
+            </value>
+            <value>
+                <fullName>ACCOUNT_LOCKED</fullName>
+                <default>false</default>
+                <label>Account Locked</label>
+            </value>
+            <value>
+                <fullName>E_BILL_REQUIRED</fullName>
+                <default>false</default>
+                <label>E-Bill Required</label>
+            </value>
+            <value>
+                <fullName>LOGIN_FAILURE</fullName>
+                <default>false</default>
+                <label>Login Failure</label>
+            </value>
+            <value>
+                <fullName>MULTIFACTOR_AUTH_FAILURE</fullName>
+                <default>false</default>
+                <label>Multi-Factor Authentication Failure</label>
+            </value>
+            <value>
+                <fullName>NAVIGATION_FAILURE</fullName>
+                <default>false</default>
+                <label>Navigation Failure</label>
+            </value>
+            <value>
+                <fullName>NO_ACCOUNTS_FOUND</fullName>
+                <default>false</default>
+                <label>No Accounts Found</label>
+            </value>
+            <value>
+                <fullName>NO_ACTION_REQUIRED</fullName>
+                <default>false</default>
+                <label>No Action Required</label>
+            </value>
+            <value>
+                <fullName>SECURITY_QUESTIONS</fullName>
+                <default>false</default>
+                <label>Security Questions</label>
+            </value>
+            <value>
+                <fullName>STATEMENT_UNAVAILABLE</fullName>
+                <default>false</default>
+                <label>Statement Unavailable</label>
+            </value>
+            <value>
+                <fullName>UNDER_REVIEW</fullName>
+                <default>false</default>
+                <label>Under Review</label>
+            </value>
+            <value>
+                <fullName>UNSUPPORTED_CAPTCHA</fullName>
+                <default>false</default>
+                <label>Unsupported CAPTCHA</label>
+            </value>
+            <value>
+                <fullName>USER_ACTION_REQUIRED</fullName>
+                <default>false</default>
+                <label>User Action Required</label>
+            </value>
+            <value>
+                <fullName>WEBSITE_DOWN</fullName>
+                <default>false</default>
+                <label>Website Down</label>
+            </value>
+            <value>
+                <fullName>ACCOUNT_SETUP_REQUIRED</fullName>
+                <default>false</default>
+                <label>Account Setup Required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

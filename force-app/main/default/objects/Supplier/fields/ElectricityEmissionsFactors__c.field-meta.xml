@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ElectricityEmissionsFactors__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description
+    >A custom field so that the Urjanet app can create Stationary Asset Environmental Sources (since the emissions factor fields are required).</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+    >The selection placed in this field will be used as the "Electricity Emissions Factors" field selection whenever the Urjanet App automatically creates Stationary Asset Environmental Sources from this Supplier.</inlineHelpText>
+    <label>Electricity Emissions Factors</label>
+    <referenceTo>ElectricityEmssnFctrSet</referenceTo>
+    <relationshipLabel>Supplier</relationshipLabel>
+    <relationshipName>Supplier</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

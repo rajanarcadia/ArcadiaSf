@@ -1,0 +1,10 @@
+{
+  "status" : 400,
+  "message" : "Credential with id Test-credential-Id not found",
+  "error" : "Bad request",
+  "exception" : null,
+  "path" : "/api/public/v1/credentials/Test-credential-Id/accounts",
+  "timestamp" : "2022-04-28T16:21:16.548+00:00",
+  "data" : null,
+  "errorMsg" : "Error message"
+}

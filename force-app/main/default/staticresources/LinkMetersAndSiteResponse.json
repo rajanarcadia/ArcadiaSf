@@ -1,0 +1,209 @@
+{
+    "_embedded": {
+        "meters": [
+            {
+                "entityId": "Test-Site-Id",
+                "accountNumbers": ["Test-account-Id"],
+                "lastModifiedDate": "2022-04-10T00:22:09.000+00:00",
+                "createdDate": "2022-04-01T16:00:04.000+00:00",
+                "createdBy": "system",
+                "lastModifiedBy": "system",
+                "serviceAddress": {
+                    "recipient": null,
+                    "streetLine1": "1415 WASHINGTON ST",
+                    "streetLine2": "APT 304",
+                    "city": "DENVER",
+                    "state": "CO",
+                    "country": "US",
+                    "postalCode": "80203-2047",
+                    "fullAddress": "1415 WASHINGTON ST, APT 304, DENVER, CO, 80203-2047",
+                    "addressType": "FULL"
+                },
+                "providerName": "Xcel Energy",
+                "meterNumber": "R1251766",
+                "normalizedMeterNumber": "R1251766",
+                "previousMeterNumber": null,
+                "normalizedPreviousMeterNumber": null,
+                "podNumber": "301731083",
+                "normalizedPodNumber": "301731083",
+                "meterConstantMultiplier": null,
+                "previousMeterConstantMultiplier": null,
+                "serviceDescription": null,
+                "serviceType": "electric",
+                "bulbType": null,
+                "pipeType": null,
+                "nextExpectedPostDate": "2022-05-08",
+                "meterStatus": "CURRENT",
+                "site": {
+                    "lastModifiedDate": "2022-04-01T16:00:04.000+00:00",
+                    "createdDate": "2022-04-01T16:00:04.000+00:00",
+                    "createdBy": "system",
+                    "lastModifiedBy": "system",
+                    "siteNumber": null,
+                    "siteName": "SITE-1415WSHNGTNSTPT304DNVRC802032047-RBJR",
+                    "siteCode": null,
+                    "region": null,
+                    "subRegion": null,
+                    "facilityType": null,
+                    "serviceAddress": {
+                        "recipient": null,
+                        "streetLine1": "1415 WASHINGTON ST",
+                        "streetLine2": "APT 304",
+                        "city": "DENVER",
+                        "state": "CO",
+                        "country": "US",
+                        "postalCode": "80203-2047",
+                        "fullAddress": "1415 WASHINGTON ST, APT 304, DENVER, CO, 80203-2047",
+                        "addressType": "FULL"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id"
+                        },
+                        "accounts": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/accounts"
+                        },
+                        "statements": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/statements"
+                        },
+                        "meters": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/meters"
+                        },
+                        "credentials": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/credentials"
+                        },
+                        "events": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/events"
+                        }
+                    }
+                },
+                "currentTariffs": null,
+                "customData": null,
+                "_links": {
+                    "provider": {
+                        "href": "https://api.urjanet.com/utility/providers/Test-Provider-Id"
+                    },
+                    "self": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter2-Id"
+                    },
+                    "accounts": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter2-Id/accounts"
+                    },
+                    "site": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter2-Id/site"
+                    },
+                    "meterData": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter2-Id/meterData"
+                    },
+                    "statements": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter2-Id/statements"
+                    },
+                    "credentials": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter2-Id/credentials"
+                    }
+                }
+            },
+            {
+                "accountNumbers": ["Test-account-Id"],
+                "lastModifiedDate": "2022-04-10T00:22:09.000+00:00",
+                "createdDate": "2022-04-01T16:00:04.000+00:00",
+                "createdBy": "system",
+                "lastModifiedBy": "system",
+                "providerName": "Xcel Energy",
+                "meterNumber": "W2559765",
+                "normalizedMeterNumber": "W2559765",
+                "previousMeterNumber": null,
+                "normalizedPreviousMeterNumber": null,
+                "podNumber": "301731083",
+                "normalizedPodNumber": "301731083",
+                "meterConstantMultiplier": null,
+                "previousMeterConstantMultiplier": null,
+                "serviceDescription": null,
+                "serviceType": "electric",
+                "bulbType": null,
+                "pipeType": null,
+                "nextExpectedPostDate": "2022-05-08",
+                "meterStatus": "CURRENT",
+                "site": {
+                    "lastModifiedDate": "2022-04-01T16:00:04.000+00:00",
+                    "createdDate": "2022-04-01T16:00:04.000+00:00",
+                    "createdBy": "system",
+                    "lastModifiedBy": "system",
+                    "siteNumber": null,
+                    "siteName": "SITE-1415WSHNGTNSTPT304DNVRC802032047-RBJR",
+                    "siteCode": null,
+                    "region": null,
+                    "subRegion": null,
+                    "facilityType": null,
+                    "serviceAddress": {
+                        "recipient": null,
+                        "streetLine1": "1415 WASHINGTON ST",
+                        "streetLine2": "APT 304",
+                        "city": "DENVER",
+                        "state": "CO",
+                        "country": null,
+                        "postalCode": "80203-2047",
+                        "fullAddress": "1415 WASHINGTON ST, APT 304, DENVER, CO, 80203-2047",
+                        "addressType": "FULL"
+                    },
+                    "_links": {
+                        "self": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id"
+                        },
+                        "accounts": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/accounts"
+                        },
+                        "statements": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/statements"
+                        },
+                        "meters": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/meters"
+                        },
+                        "credentials": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/credentials"
+                        },
+                        "events": {
+                            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/events"
+                        }
+                    }
+                },
+                "currentTariffs": null,
+                "customData": null,
+                "_links": {
+                    "provider": {
+                        "href": "https://api.urjanet.com/utility/providers/Test-Provider-Id"
+                    },
+                    "self": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter-Id"
+                    },
+                    "accounts": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter-Id/accounts"
+                    },
+                    "site": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter-Id/site"
+                    },
+                    "meterData": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter-Id/meterData"
+                    },
+                    "statements": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter-Id/statements"
+                    },
+                    "credentials": {
+                        "href": "https://api.urjanet.com/utility/meters/Test-Meter-Id/credentials"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "https://api.urjanet.com/utility/sites/Test-Site-Id/meters?page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}

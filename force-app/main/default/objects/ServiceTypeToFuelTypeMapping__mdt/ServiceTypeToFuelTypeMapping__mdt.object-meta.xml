@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Custom mappings for UtilityMeter &quot;Service Type&quot; to Stationary Asset Energy Use &quot;Fuel Type&quot;</description>
+    <label>Service Type to Fuel Type Mapping</label>
+    <pluralLabel>Service Type to Fuel Type Mappings</pluralLabel>
+    <visibility>Protected</visibility>
+</CustomObject>

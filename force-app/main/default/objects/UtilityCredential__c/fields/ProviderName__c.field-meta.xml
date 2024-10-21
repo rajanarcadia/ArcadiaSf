@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProviderName__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The commonly known name for the utility company.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The commonly known name for the utility company.</inlineHelpText>
+    <label>Provider Name</label>
+    <referenceTo>Supplier</referenceTo>
+    <relationshipLabel>Utility Credentials</relationshipLabel>
+    <relationshipName>UtilityCredentials</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

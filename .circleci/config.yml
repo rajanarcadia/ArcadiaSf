@@ -1,0 +1,278 @@
+version: 2.1
+orbs:
+    slack: circleci/slack@4.4.4
+defaults: &defaults
+    working_directory: ~/repo
+    docker:
+        - image: 'circleci/node:17.2.0-browsers'
+commands:
+    notify:
+        steps:
+            - slack/notify:
+                  event: fail
+                  template: basic_fail_1
+                  channel: "C03BKC93X4H"
+                  branch_pattern: "integration,qa,client-qa,staging,main"
+            -  slack/notify:
+                   event: pass
+                   template: basic_success_1
+                   channel: "C03BKC93X4H"
+                   branch_pattern: "integration,qa,client-qa,staging,main"
+    set_auth_file:
+        parameters:
+            url:
+                type: string
+        steps:
+            - run: echo 'Authenticating to ' << parameters.url >>
+            - run: echo << parameters.url >> > /tmp/sfdx_target.url
+    get_build_deps:
+        steps:
+            - checkout
+            - run:
+                  name: Install Build Dependencies
+                  command: npm install
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                      - .
+    create_folders:
+        steps:
+            - run:
+                  name: Create Folders
+                  command: |
+                      mkdir -p ./artifacts/test-results
+                      mkdir -p ./artifacts/pmd
+                      mkdir -p /tmp/artifacts/deploy
+    install_cli:
+        steps:
+            - run:
+                  name: Install SFDX & PMD
+                  command: |
+                      wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+                      mkdir ~/sfdx
+                      tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+                      sudo ln -sf "$HOME/sfdx/bin/sfdx" "/usr/local/bin/sfdx"
+                      ./pmd/pmd_install.sh
+                      yarn config set ignore-engines true
+                      # echo 'y' | sfdx plugins:install isvte-sfdx-plugin
+    run_jest_tests:
+        steps:
+            - run:
+                  name: Run Jest Unit Tests
+                  command: |
+                      chmod +xr ./node_modules/@salesforce/sfdx-lwc-jest/bin/sfdx-lwc-jest
+                      npm run test:unit
+            - store_test_results:
+                  path: ./artifacts/test-results
+            - store_artifacts:
+                  path: ./artifacts
+    pmd_scan:
+        steps:
+            - run:
+                  name: Run PMD Scan
+                  command: |
+                      #run pmd source scanner
+                      echo "Running PMD source code scanner"
+                      ./pmd/pmd_scan.sh -o /tmp/artifacts/pmd
+                      ./pmd/pmd_scan.sh -s force-app/main/CRUDFLS -o /tmp/artifacts/pmd -f PMD_results_CRUDFLS.html -r pmd/pmd_rules.CRUDFLS.xml
+                      ./pmd/pmd_scan.sh -s force-app/main/CSDomainSelector -o /tmp/artifacts/pmd -f PMD_results_CSDomainSelector.html -r pmd/pmd_rules.CRUDFLS.xml
+                      ./pmd/pmd_scan.sh -s force-app/main/CSUtils -o /tmp/artifacts/pmd -f PMD_results_CSUtils.html -r pmd/pmd_rules.CRUDFLS.xml
+                      ./pmd/pmd_scan.sh -s force-app/main/CSLogger -o /tmp/artifacts/pmd -f PMD_results_CSLogger.html -r pmd/pmd_rules.CRUDFLS.xml
+            - store_artifacts:
+                  path: ./artifacts
+    grep_secrev_issues:
+        steps:
+            - run:
+                  name: Run Metadata Scan for SecRev issues
+                  command: |
+                      echo "Run Metadata Scan for common security review and quality pitfalls"
+                      ./dx-utils/grep_secrev_issues.sh -o /tmp/artifacts/csmd
+            - store_artifacts:
+                  path: ./artifacts
+    isvte_scan:
+        steps:
+            - run:
+                  name: ISVTE Scan
+                  command: |
+                    # sfdx isvte:mdscan -d deploy >> /tmp/artifacts/isvte.txt
+            - store_artifacts:
+                  destination: ./artifacts
+                  path: /tmp/artifacts
+    packagability_scan:
+        steps:
+            - run: |
+                  npm run mdcoverage -- -p deploy/package.xml -o /tmp/artifacts/unpackageable-components.json -t /tmp/artifacts/packageability.txt
+            - store_artifacts:
+                  path: ./artifacts
+jobs:
+    validate:
+        <<: *defaults
+        parameters:
+            url:
+                type: string
+        steps:
+            - get_build_deps
+            - install_cli
+            - run_jest_tests
+            - create_folders
+            - pmd_scan
+            - set_auth_file:
+                  url: << parameters.url >>
+            - run:
+                  name: Authenticate to Org
+                  command: sfdx auth:sfdxurl:store -f /tmp/sfdx_target.url -a target_org
+            - run:
+                  name: Convert DX Code To Metadata API
+                  command: |
+                      chmod -R +xr ./dx-utils
+                      #convert DX to legacy metadata
+                      ./dx-utils/convert_to_metadata.sh deploy force-app/ ""
+                      cp -pr deploy /tmp/artifacts/deploy
+            - run:
+                  name: Check Only
+                  command: |
+                      # Can't use source deploy for check only because it will only deploy one directory at a time
+                      # and since it's not actaully deploying the dependencies will not be there when the
+                      # dependent folders deploy
+                      ./dx-utils/deploy.sh target_org checkonly
+            - run:
+                  name: Destructive Deploy
+                  command: |
+                      ./dx-utils/destructive.sh target_org checkonly
+            - isvte_scan
+            - packagability_scan
+    build:
+        <<: *defaults
+        parameters:
+            url:
+                type: string
+        steps:
+            - checkout
+            - get_build_deps
+            - install_cli
+            - run_jest_tests
+            - create_folders
+            - pmd_scan
+            - set_auth_file:
+                  url: << parameters.url >>
+            - run:
+                  name: Authenticate to Org
+                  command: sfdx auth:sfdxurl:store -f /tmp/sfdx_target.url -a target_org
+            - run:
+                  name: Deploy to org
+                  command: |
+                      chmod -R +xr ./dx-utils
+                      sfdx force:source:deploy -u target_org -w 30  -l RunLocalTests -p force-app/
+            - run:
+                  name: Convert DX Code To Metadata API
+                  command: |
+                      #convert DX to legacy metadata
+                      ./dx-utils/convert_to_metadata.sh deploy force-app/ ""
+                      cp -pr deploy /tmp/artifacts/deploy
+            - run:
+                  name: Destructive Deploy
+                  command: |
+                      ./dx-utils/destructive.sh target_org
+            - isvte_scan
+            - packagability_scan
+            - notify
+    package_validate:
+        <<: *defaults
+        parameters:
+            url:
+                type: string
+        steps:
+            - checkout
+            - get_build_deps
+            - install_cli
+            - run_jest_tests
+            - create_folders
+            - pmd_scan
+            - set_auth_file:
+                  url: << parameters.url >>
+            - run:
+                  name: Authenticate to Org
+                  command: sfdx auth:sfdxurl:store -f /tmp/sfdx_target.url -a target_org --setdefaultdevhubusername
+            - run:
+                  name: Create package version
+                  command: |
+                      chmod -R +xr ./dx-utils
+                      ./dx-utils/create_package_version.sh
+            - run:
+                  name: Create Temp Scratch Org
+                  command: |
+                      # sfdx force:org:create -a circle_build_$CIRCLE_BUILD_NUM -f config/project-scratch-def.json
+            - run:
+                  name: Install Package
+                  command: |
+                      ./dx-utils/install_package_version.sh circle_build_$CIRCLE_BUILD_NUM
+            - run:
+                  name: Run Apex Tests
+                  command: |
+                      sfdx force:apex:test:run -y --wait 6  --testlevel RunAllTestsInOrg --resultformat tap --codecoverage -d test_results -u circle_build_$CIRCLE_BUILD_NUM
+                      dx-utils/parse_test_results.js >> /tmp/artifacts/test_results/test-result.txt
+            - run:
+                  name: Cleanup
+                  command: sfdx force:org:delete -p -u circle_build_$CIRCLE_BUILD_NUM
+                  when: always
+            - store_test_results:
+                  path: test_results
+            - store_artifacts:
+                  destination: test-result.txt
+                  path: test_results/test-result.txt
+            - notify
+workflows:
+    version: 2.1
+    validate:
+        jobs:
+            - validate:
+                  context:
+                      - cs-slack-context
+                  url: $SFDXURL_INT
+                  filters:
+                      branches:
+                          ignore:
+                              - main
+                              - staging
+                              - qa
+                              - client-qa
+                              - integration
+    build_int:
+        jobs:
+            - build:
+                  context:
+                      - cs-slack-context
+                  url: $SFDXURL_INT
+                  filters:
+                      branches:
+                          only:
+                              - integration
+    build_qa:
+        jobs:
+            - build:
+                  context:
+                      - cs-slack-context
+                  url: $SFDXURL_QA
+                  filters:
+                      branches:
+                          only:
+                              - qa
+    build_clientQA:
+        jobs:
+            - build:
+                  context:
+                      - cs-slack-context
+                  url: $SFDXURL_CLIENTQA
+                  filters:
+                      branches:
+                          only:
+                              - staging
+
+    validate_staging:
+        jobs:
+            - package_validate:
+                  url: $SFDXURL_DEVHUB
+                  filters:
+                      branches:
+                          only:
+                              - staging

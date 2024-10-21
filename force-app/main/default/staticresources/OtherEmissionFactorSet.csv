@@ -1,0 +1,11 @@
+Ch4GlblWarmingPot,EmissionFactorDataSource,EmissionFactorUpdateYear,N2oGlblWarmingPot,Name,RefrigerantLeakageRtInKgItKwh,RefrigerantLeakageRtInKgM2,RefrigerantLeakageRtInKgSqft
+28,https://www.epa.gov/sites/default/files/2021-04/documents/emission-factors_apr2021.pdf,2021,265,Mobile Fuel Conversion Factors - DEFRA EPA 2021,0.00000166,0.249359521292,0.02316628
+28,"https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting;
+
+https://www.epa.gov/sites/production/files/2018-03/documents/emission-factors_mar_2018_0.pdf",2018,265,Mobile Fuel Conversion Factors - DEFRA EPA 2018,0.00000166,0.249359521292,0.02316628
+28,"https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting;
+
+https://www.epa.gov/sites/production/files/2018-03/documents/emission-factors_mar_2018_0.pdf",2018,265,Stationary Fuel Conversion Factors - DEFRA EPA 2018,0.00000166,0.249359521292,0.02316628
+28,"https://www.epa.gov/sites/default/files/2021-04/documents/emission-factors_apr2021.pdf
+
+https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2021",2021,265,Stationary Fuel Conversion Factors - DEFRA EPA 2021,0.00000166,0.249359521292,0.02316628

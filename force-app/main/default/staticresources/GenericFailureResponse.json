@@ -1,0 +1,8 @@
+{
+    "status": 400,
+    "error": "Request Failed",
+    "exception": null,
+    "path": "/api/public/v1/",
+    "timestamp": "2022-06-08T02:43:01.442+00:00",
+    "data": null
+}

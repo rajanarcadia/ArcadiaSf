@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_the_record</fullName>
+    <active>true</active>
+    <description>Record will be locked when user selects the checkbox.</description>
+    <errorConditionFormula>AND(IsRecordLocked__c, NOT(ISCHANGED(IsRecordLocked__c)))</errorConditionFormula>
+    <errorMessage
+    >Record is locked, Unlock for updating. If you are unable to unlock please contact your Salesforce Administrator for help.</errorMessage>
+</ValidationRule>

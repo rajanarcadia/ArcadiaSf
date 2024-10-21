@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContributionStatus__c</fullName>
+    <description>Non-contributing is not calculated for audits or total charges or total usages.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Non-contributing is not calculated for audits or total charges or total usages.</inlineHelpText>
+    <label>Contribution Status</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

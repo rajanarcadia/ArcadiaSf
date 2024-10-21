@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PeriodStart__c</fullName>
+    <description>Date that the billing period started.</description>
+    <externalId>false</externalId>
+    <inlineHelpText
+    >Date that the billing period started. (Editing this field will trigger the "Manually Updated" field for this asset)
+    </inlineHelpText>
+    <label>Period Start</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

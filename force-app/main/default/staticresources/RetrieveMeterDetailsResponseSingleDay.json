@@ -1,0 +1,320 @@
+{
+  "_embedded": {
+    "meters": [
+      {
+        "createdDate": "2022-04-01T19:54:45.000+00:00",
+        "serviceType": "electric",
+        "meterReadDate": "2021-08-08",
+        "nextReadDate": "2021-10-07",
+        "periodStart": "2021-08-08",
+        "periodEnd": "2021-08-08",
+        "prevReadDate": "2021-08-05",
+        "meterNumber": "28707791",
+        "normalizedMeterNumber": "28707791",
+        "previousMeterNumber": "12345",
+        "normalizedPreviousMeterNumber": "23456",
+        "rateOrTariffActualName": "unknown_tariff",
+        "podNumber": "303682599",
+        "normalizedPodNumber": "303682599",
+        "serviceDescription": "Test service description",
+        "readTypeAsPrinted": "Estimate",
+        "deregulationStatus": "full_service",
+        "serviceAddress": {
+          "recipient": "Test Recipient",
+          "streetLine1": "123 DOVER CV",
+          "streetLine2": "EDEN",
+          "city": "CHARLOTTE",
+          "state": "NC",
+          "country": "US",
+          "postalCode": "55347-1073",
+          "fullAddress": "123 DOVER CV, EDEN, CHARLOTTE, NC, 55347-1073, US",
+          "addressType": "FULL"
+        },
+        "meterConstantMultiplier": 23,
+        "previousMeterConstantMultiplier": 15,
+        "meterConversionMultiplier": 12,
+        "contributionStatus": "CONTRIBUTING",
+        "energyCarryForward": 25,
+        "energyNewCarryForward": 30,
+        "energyAnniversaryDate": null,
+        "lineLoss": 5,
+        "gridPointLineLoss": 5,
+        "powerFactor": 3,
+        "bulbType": "Softlight",
+        "bulbQuantity": 5,
+        "pipeType": "Test pipe type",
+        "amountDue": 23.00,
+        "amountDueAfterDueDate": 15.00,
+        "amountDueBeforeDueDate": 8.00,
+        "discountBeforeDueDate": 7.00,
+        "previousBalance": 82.00,
+        "outstandingBalance": 0,
+        "totalCharges": -75.51,
+        "newCharges": 81.00,
+        "customerNumber": "12345",
+        "cycleNumber": "23455",
+        "facilityNumber": "234567",
+        "facilityName": "Test facility",
+        "finalBillNotice": "Final bill",
+        "mapNumber": "23424",
+        "amountDueByDate": 22.00,
+        "disconnectDate": null,
+        "totalUsage": "377",
+        "totalUsageUnit": "kWh",
+        "usages": [ 
+          {
+            "createdDate": "2022-04-01T19:54:45.000+00:00",
+            "citedUsage": null,
+            "measuredUsage": 377,
+            "noncoincidentalUsage": null,
+            "hoursOfUse": 15,
+            "loadFactor": 2,
+            "powerFactor": 2,
+            "previousUsage": 890,
+            "meterReadingRaw": 8476,
+            "meterReadingDelta": 23,
+            "meterReadingRawPrevious": 8099,
+            "meterReadingDeltaPrevious": 25,
+            "numberOfDaysInPeriod": 34,
+            "pressureMultiplier": 2,
+            "meterConstantMultiplier": 23,
+            "meterConversionMultiplier": 24,
+            "calorificValue": 2300,
+            "loadType": "Test load",
+            "readTypeAsPrinted": "Estimate",
+            "previousReadTypeAsPrinted": "Actual",
+            "rateOrTariffActualName": "Test Tariff",
+            "usageActualName": "Total Energy",
+            "readingSchedule": "Every month",
+            "outageBlock": "none",
+            "meterReadDate": "2021-09-08",
+            "prevReadDate": "2021-08-05",
+            "contributionStatus": "CONTRIBUTING",
+            "usageUnit": "kWh",
+            "meterReadingDeltaUsageUnit": "kWh",
+            "measurementType": "general_consumption",
+            "meterReadType": "estimated",
+            "previousMeterReadType": "actual",
+            "tariffRateComponents": [
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "total"
+              }
+            ]
+          },
+          {
+            "createdDate": "2022-04-01T19:54:45.000+00:00",
+            "citedUsage": 57,
+            "measuredUsage": 57,
+            "noncoincidentalUsage": null,
+            "hoursOfUse": 2,
+            "loadFactor": 3,
+            "powerFactor": 5,
+            "previousUsage": 7,
+            "meterReadingRaw": 995,
+            "meterReadingDelta": 922,
+            "meterReadingRawPrevious": 938,
+            "meterReadingDeltaPrevious": 924,
+            "numberOfDaysInPeriod": 30,
+            "pressureMultiplier": 2,
+            "meterConstantMultiplier": 1,
+            "meterConversionMultiplier": 3,
+            "calorificValue": 7,
+            "loadType": null,
+            "readTypeAsPrinted": "Estimate",
+            "previousReadTypeAsPrinted": "Actual",
+            "rateOrTariffActualName": null,
+            "usageActualName": "On Pk Energy",
+            "readingSchedule": null,
+            "outageBlock": null,
+            "meterReadDate": null,
+            "prevReadDate": null,
+            "contributionStatus": "CONTRIBUTING",
+            "usageUnit": "kWh",
+            "meterReadingDeltaUsageUnit": null,
+            "measurementType": "general_consumption",
+            "meterReadType": "estimated",
+            "previousMeterReadType": "actual",
+            "tariffRateComponents": [
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "on_peak"
+              }
+            ]
+          },
+          {
+            "createdDate": "2022-04-01T19:54:45.000+00:00",
+            "citedUsage": 321,
+            "measuredUsage": 321,
+            "noncoincidentalUsage": null,
+            "hoursOfUse": null,
+            "loadFactor": null,
+            "powerFactor": null,
+            "previousUsage": null,
+            "meterReadingRaw": 7481,
+            "meterReadingDelta": null,
+            "meterReadingRawPrevious": 7160,
+            "meterReadingDeltaPrevious": null,
+            "numberOfDaysInPeriod": null,
+            "pressureMultiplier": null,
+            "meterConstantMultiplier": null,
+            "meterConversionMultiplier": null,
+            "calorificValue": null,
+            "loadType": null,
+            "readTypeAsPrinted": "Estimate",
+            "previousReadTypeAsPrinted": "Actual",
+            "rateOrTariffActualName": null,
+            "usageActualName": "Off Pk Energy",
+            "readingSchedule": null,
+            "outageBlock": null,
+            "meterReadDate": null,
+            "prevReadDate": null,
+            "contributionStatus": "CONTRIBUTING",
+            "usageUnit": "kWh",
+            "meterReadingDeltaUsageUnit": null,
+            "measurementType": "general_consumption",
+            "meterReadType": "estimated",
+            "previousMeterReadType": "actual",
+            "tariffRateComponents": [
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "off_peak"
+              }
+            ]
+          },
+          {
+            "createdDate": "2022-04-01T19:54:45.000+00:00",
+            "citedUsage": null,
+            "measuredUsage": 798.73,
+            "noncoincidentalUsage": null,
+            "hoursOfUse": null,
+            "loadFactor": null,
+            "powerFactor": null,
+            "previousUsage": null,
+            "meterReadingRaw": null,
+            "meterReadingDelta": null,
+            "meterReadingRawPrevious": null,
+            "meterReadingDeltaPrevious": null,
+            "numberOfDaysInPeriod": null,
+            "pressureMultiplier": null,
+            "meterConstantMultiplier": null,
+            "meterConversionMultiplier": null,
+            "calorificValue": null,
+            "loadType": null,
+            "readTypeAsPrinted": null,
+            "previousReadTypeAsPrinted": null,
+            "rateOrTariffActualName": null,
+            "usageActualName": null,
+            "readingSchedule": null,
+            "outageBlock": null,
+            "meterReadDate": null,
+            "prevReadDate": null,
+            "contributionStatus": "CONTRIBUTING",
+            "usageUnit": "kWh",
+            "meterReadingDeltaUsageUnit": null,
+            "measurementType": "demand",
+            "meterReadType": "actual",
+            "previousMeterReadType": "actual",
+            "tariffRateComponents": [
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "max_peak"
+              }
+            ]
+          }
+        ],
+        "charges": [
+          {
+            "createdDate": "2022-04-01T19:54:45.000+00:00",
+            "chargeAmount": 11.68,
+            "averageUnitCost": 28.00,
+            "chargeActualName": "On-Peak Energy ChSumme",
+            "chargeGroupHeading": "Test charge group",
+            "chargeName": "ch.energy_charge_on_peak",
+            "lifecycleStage": null,
+            "chargeAmountCurrency": "USD",
+            "chargeRateCurrency": "cent",
+            "measurementType": "power",
+            "usageUnit": "kWh",
+            "chargeUnitsUsed": 57,
+            "chargeRate": 0.20497,
+            "chargeRateBase": 7,
+            "chargeRateAdder": 5,
+            "unitsPerRate": 2,
+            "additionalRateMultiplier": 3,
+            "tariffRateComponents": [
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "on_peak"
+              },
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "summer"
+              }
+            ],
+            "tariff": {
+              "createdDate": "2022-02-25T02:25:58.000+00:00",
+              "tariffName": "unknown_tariff",
+              "providerAlias": "XcelEnergy",
+              "providerName": "Xcel Energy"
+            },
+            "contributionStatus": "CONTRIBUTING",
+            "chargeType": "DEBIT"
+          },
+          {
+            "createdDate": "2022-04-01T19:54:45.000+00:00",
+            "chargeAmount": -0.32,
+            "averageUnitCost": null,
+            "chargeActualName": "Premises Total",
+            "chargeGroupHeading": "ELECTRICITY CHARGES",
+            "chargeName": "ch.subtotal_charge_for_all_services",
+            "lifecycleStage": null,
+            "chargeAmountCurrency": "USD",
+            "chargeRateCurrency": "cent",
+            "measurementType": null,
+            "usageUnit": null,
+            "chargeUnitsUsed": null,
+            "chargeRate": null,
+            "chargeRateBase": null,
+            "chargeRateAdder": null,
+            "unitsPerRate": null,
+            "additionalRateMultiplier": null,
+            "tariffRateComponents": [
+              {
+                "tariffName": "unknown_tariff",
+                "tariffRateComponentType": "not_available"
+              }
+            ],
+            "tariff": {
+              "createdDate": "2022-02-25T02:25:58.000+00:00",
+              "tariffName": "unknown_tariff",
+              "providerAlias": "XcelEnergy",
+              "providerName": "Xcel Energy"
+            },
+            "contributionStatus": "REDUNDANT",
+            "chargeType": "DEBIT"
+          }
+        ],
+        "_links": {
+          "meter": {
+            "href": "https://test.urjanet.com/utility/meters/1234abcd-401c-d3c9-9598-6ae1802271dd"
+          },
+          "statement": {
+            "href": "https://test.urjanet.com/utility/statements/1234abcd-3a09-d0ec-a275-e2e53158f011"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://test.urjanet.com/utility/meters/1234abcd-401c-d3c9-9598-6ae1802271dd/meterData?page=0&size=20"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 1,
+    "totalPages": 1,
+    "number": 0
+  }
+}

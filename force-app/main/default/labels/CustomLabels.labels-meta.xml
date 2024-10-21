@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>DAE_BadQuery</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Bad Query</shortDescription>
+        <value>The supplied SOQL query could not be parsed/validated.</value>
+    </labels>
+    <labels>
+        <fullName>DAE_BadRelationshipName</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Bad Relationship Name</shortDescription>
+        <value>Subquery through relationship &quot;{0}&quot; does not exist. Bad relationship name?</value>
+    </labels>
+    <labels>
+        <fullName>DAE_DuplicateRecordForUpsert</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Duplicate Record For Upsert</shortDescription>
+        <value>Duplicate records with External Id &quot;{0}&quot; were specified in an upsert call.</value>
+    </labels>
+    <labels>
+        <fullName>DAE_FieldDoesNotExist</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Field Does Not Exist</shortDescription>
+        <value>Field &quot;{0}&quot; on object &quot;{1}&quot; does not exist.</value>
+    </labels>
+    <labels>
+        <fullName>DAE_FieldNotAccessible</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Field Not Accessible</shortDescription>
+        <value
+        >&quot;{0}&quot; permission to field &quot;{2}&quot; on object &quot;{1}&quot; is not allowed for the current user.</value>
+    </labels>
+    <labels>
+        <fullName>DAE_InvalidExternalId</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Invalid External Id</shortDescription>
+        <value>Field &quot;{0}&quot; on object &quot;{1}&quot; is not a valid External Id.</value>
+    </labels>
+    <labels>
+        <fullName>DAE_ObjectNotAccessible</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DAE: Object Not Accessible</shortDescription>
+        <value>&quot;{0}&quot; permission to object &quot;{1}&quot; is not allowed for the current user.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_Login_Failure_Error_Message</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Login failure error message</shortDescription>
+        <value>Unsuccessful Login to Arcadia: Check Arcadia credentials. Contact Admin.</value>
+    </labels>
+    <labels>
+        <fullName>GetCredentialsErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get credentials failure error message</shortDescription>
+        <value>Failure to pull Credentials for given Correlation Id.</value>
+    </labels>
+    <labels>
+        <fullName>GetUtilityStatementFilesErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get Utility Statement Files failure error message</shortDescription>
+        <value>Failure to pull Utility Statement Files for given Entity Id(s).</value>
+    </labels>
+    <labels>
+        <fullName>GetArcadiaServiceProvidersErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get Arcadia Service Provider failure error message</shortDescription>
+        <value>Failure to pull the list of Arcadia Service Providers.</value>
+    </labels>
+    <labels>
+        <fullName>GetSitesErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get sites failure error message</shortDescription>
+        <value>Failure to pull sites for given Account Id.</value>
+    </labels>
+    <labels>
+        <fullName>GetMetersByAccountErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get Meters By Account failure error message</shortDescription>
+        <value>Failure to pull Meters for given Account Id.</value>
+    </labels>
+    <labels>
+        <fullName>GetStatementsErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get statements failure error message</shortDescription>
+        <value>Failure to pull statements for given Account Id.</value>
+    </labels>
+    <labels>
+        <fullName>RetrieveMetersErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Retrieve meter details failure error message</shortDescription>
+        <value>Failure to retrieve meter details for given meter Id.</value>
+    </labels>
+    <labels>
+        <fullName>UpdateSiteInMeterErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Update Site in Meter failure error message</shortDescription>
+        <value>Failure to Update site details for given meter Id.</value>
+    </labels>
+    <labels>
+        <fullName>SAESRecordCreatiomErrorMessageTitle</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: SAES Record Creation Error Message Title</shortDescription>
+        <value>Stationary Asset Environmental Sources not created. See full message for details.</value>
+    </labels>
+    <labels>
+        <fullName>SAESRecordCreatiomErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: SAES Record Creation Error Message-1</shortDescription>
+        <value
+        >Stationary Asset Environmental Source not created because default emission factors at Supplier level for {0} are not set. Go to the {0}, set the two emission factor fields, and it will update after next daily refresh.</value>
+    </labels>
+    <labels>
+        <fullName>SAESRecordCreationErrorMessage2</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: SAES Record Creation Error Message-2</shortDescription>
+        <value
+        >Stationary Asset Environmental Sources (Sites) might not have been created due to a Supplier not being linked to the credential or Emission Factors are not set at the Supplier level. Consult your Arcadia User Guide for more information, if problems persist, contact Arcadia.</value>
+    </labels>
+    <labels>
+        <fullName>GetUpdateUrlErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Get Update Url failure error message</shortDescription>
+        <value>Failure to get credential update url for given Credential Id.</value>
+    </labels>
+    <labels>
+        <fullName>CompanyName</fullName>
+        <categories>Display Text</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia Company Name</shortDescription>
+        <value>Arcadia</value>
+    </labels>
+    <labels>
+        <fullName>HandlePushSitesSuccess</fullName>
+        <categories>Display Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success message when User performs Push Sites action</shortDescription>
+        <value>Sites are now in queue to send to Arcadia</value>
+    </labels>
+    <labels>
+        <fullName>HandleRetrieveDataSuccess</fullName>
+        <categories>Display Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success message when User performs Retrieve Data action</shortDescription>
+        <value>The data from Arcadia is now in the process of being refreshed</value>
+    </labels>
+    <labels>
+        <fullName>Organization_ID</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Organization ID</shortDescription>
+        <value>5ereFDhYTIQcI0byjEJ2</value>
+    </labels>
+    <labels>
+        <fullName>HandleRetrieveDataErrorMsg</fullName>
+        <categories>Display Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error message when User performs Retrieve Data action multiple times</shortDescription>
+        <value>A sync is currently in progress. Please wait a few minutes for the current sync to complete</value>
+    </labels>
+    <labels>
+        <fullName>PushSitesToUrjanet</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Push Sites To Arcadia</shortDescription>
+        <value>Push Sites to Arcadia</value>
+    </labels>
+    <labels>
+        <fullName>PushSitesToUrjanetDesc</fullName>
+        <categories>Display Text</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Push Sites To Arcadia Description</shortDescription>
+        <value
+        >This allows you to send all Stationary Asset Environmental Sources (Sites) that do not yet have an Arcadia Id over to Arcadia.</value>
+    </labels>
+    <labels>
+        <fullName>RefreshUrjanetData</fullName>
+        <categories>Button</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Refresh Arcadia Data</shortDescription>
+        <value>Refresh Arcadia Data</value>
+    </labels>
+    <labels>
+        <fullName>RefreshUrjanetDataDesc</fullName>
+        <categories>Display Text</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Refresh Arcadia Data Description</shortDescription>
+        <value
+        >Data refresh from Arcadia runs according to the batch job created. If you wish to manually update the data outside of the batch schedule, click the “Refresh Arcadia Data” button below.
+
+            For example, a Sustainability Manager forgot to fill out the emission factor fields at the Supplier level before they credentialed so no stationary asset environmental sources (sites) were created. Sustainability Manager has added the emission factor fields at the Supplier level and is now ready to try again.</value>
+    </labels>
+    <labels>
+        <fullName>Success</fullName>
+        <categories>Display Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>SyncActionsHeader</fullName>
+        <categories>Display Text</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Sync Actions Component Header</shortDescription>
+        <value>Manage Sites and Data</value>
+    </labels>
+    <labels>
+        <fullName>Canvas_ThankYou</fullName>
+        <categories>Canvas Response</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Thank You</shortDescription>
+        <value>Thank You</value>
+    </labels>
+    <labels>
+        <fullName>Canvas_Response</fullName>
+        <categories>Canvas Response</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia: Canvas response message in LWC</shortDescription>
+        <value>We have received your credentials and will be validating them soon</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_Generic_LoadingText</fullName>
+        <categories>Generic</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_Generic_LoadingText</shortDescription>
+        <value>Loading....</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementUpload_HelpText</fullName>
+        <categories>Statement Upload</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementUpload_HelpText</shortDescription>
+        <value
+        >Upload a PDF Utility Invoice to be processed by the Utility Cloud. The related usage data will be imported once processing is complete.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementUpload_Title</fullName>
+        <categories>Statement Upload</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementUpload_Title</shortDescription>
+        <value>Arcadia Statement Upload</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_Generic_ErrorText</fullName>
+        <categories>Generic, Generic Error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_Generic_ErrorText</shortDescription>
+        <value>We have run into an error. Please contact your administrator. Error Code: {0}</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_LockedRecordsUpdate_ErrorMessage</fullName>
+        <categories>Update Locked Records</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_LockedRecordsUpdate_ErrorMessage</shortDescription>
+        <value
+        >Record is locked, Unlock for updating. If you are unable to unlock please contact your Salesforce Administrator for help.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementUpload_LargeFileError</fullName>
+        <categories>Statement Upload</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementUpload_LargeFileError</shortDescription>
+        <value>File size cannot exceed 2.5MB.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementUpload_UploadError</fullName>
+        <categories>Statement Upload</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementUpload_UploadError</shortDescription>
+        <value>Unable to upload file. Please contact your Salesforce Administrator for help.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_ServiceProviders_DownloadError</fullName>
+        <categories>Statement Upload</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_ServiceProviders_DownloadError</shortDescription>
+        <value
+        >Unable to download the arcadia service providers file. Please contact your Salesforce Administrator for help.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementUpload_UploadSuccess</fullName>
+        <categories>Statement Upload</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementUpload_UploadSuccess</shortDescription>
+        <value>Success! Your file has been sent to Arcadia to be processed.</value>
+    </labels>
+
+    <labels>
+        <fullName>Arcadia_StatementDownload_HelpText</fullName>
+        <categories>Statement Download</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementDownload_HelpText</shortDescription>
+        <value
+        >The data for this statement was collected from this source file. You can download the file to your computer for review.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementDownload_Title</fullName>
+        <categories>Statement Download</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementDownload_Title</shortDescription>
+        <value>Statement source file</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementDownload_DownloadSuccess</fullName>
+        <categories>Statement Download</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementDownload_DownloadSuccess</shortDescription>
+        <value>The file has been successfully Downloaded.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_StatementDownload_DownloadError</fullName>
+        <categories>Statement Download</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_StatementDownload_DownloadError</shortDescription>
+        <value
+        >Unable to download the statement. Please contact your Salesforce Administrator if this issue persists.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Description</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Description</shortDescription>
+        <value
+        >Bulk Credential Upload allows you to provide multiple credentials in one CSV file and have them uploaded to Arcadia via Salesforce. This process will create the necessary credentials in Salesforce along with uploading them within the Utility Cloud.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_FailureMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_FailureMsg</shortDescription>
+        <value>Hmm... it looks like something went wrong. Please contact your Salesforce Administrator for help.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_StepsDescription</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_StepsDescription</shortDescription>
+        <value>Here are the steps required to upload your credentials:</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Steps_01A</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Steps_01A</shortDescription>
+        <value>Download the provided CSV template</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Steps_01B</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Steps_01B</shortDescription>
+        <value>and update with your credentials and related information</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Steps_02A</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Steps_02A</shortDescription>
+        <value>For Arcadia Service Provider name and ID, you can</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Steps_02B</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Steps_02B</shortDescription>
+        <value>download a list of all Arcadia Service Providers here</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Steps_03</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Steps_03</shortDescription>
+        <value
+        >For Salesforce Suppliers and their IDs, build a Salesforce report to display your Suppliers and their ID fields</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Steps_04</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Steps_04</shortDescription>
+        <value>Upload the filled out CSV template below</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_SuccessMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_SuccessMsg</shortDescription>
+        <value>Success! Your credentials have been sent to Arcadia to process.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Ttitle</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Ttitle</shortDescription>
+        <value>Bulk Credential Upload</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_InvalidFileMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_InvalidFileMsg</shortDescription>
+        <value
+        >There was an issue with Row(s): {0}. Please ensure all required fields are provided and correct for your credentials.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Invalid_Empty_ColumnsMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Empty_ColumnsMsg</shortDescription>
+        <value>Issue with Row(s): {0}. Please ensure all required fields are provided</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Invalid_SupplierMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Invalid_SupplierMsg</shortDescription>
+        <value>Issue with Row(s): {0}. Please check if the Supplier Id is correct.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_Invalid_ProviderMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_Invalid_ProviderMsg</shortDescription>
+        <value>Issue with Row(s): {0}. Please check if the Arcadia Service Provider Id is correct.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_BulkCredential_DuplicateMsg</fullName>
+        <categories>Bulk Credential</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia_BulkCredential_DuplicateMsg</shortDescription>
+        <value>Duplicate Credentials in Row(s): {0} are not processed.</value>
+    </labels>
+    <labels>
+        <fullName>Conversion_Unsupported_Unit</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Conversion Unsupported Unit</shortDescription>
+        <value
+        >The measurement type of {0} is not a supported unit of measurement at this time. Meter Usage RecordId: {1}.</value>
+    </labels>
+    <labels>
+        <fullName>Conversion_Unsupported_FuelType</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Conversion Unsupported FuelType</shortDescription>
+        <value>The Fuel type of {0} is not a supported type of fuel at this time. Meter Usage RecordId: {1}.</value>
+    </labels>
+    <labels>
+        <fullName>Arcadia_Plug_API_Arc_Version</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Arcadia Plug API Arc Version</shortDescription>
+        <value>2024-02-21</value>
+    </labels>
+</CustomLabels>

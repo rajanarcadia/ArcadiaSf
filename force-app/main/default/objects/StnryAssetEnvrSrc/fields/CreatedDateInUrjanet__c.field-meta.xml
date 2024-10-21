@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreatedDateInUrjanet__c</fullName>
+    <description>A custom field for the date the site was created in Arcadia&apos;s system.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the site was created in Arcadia&apos;s system.</inlineHelpText>
+    <label>Created Date in Arcadia</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

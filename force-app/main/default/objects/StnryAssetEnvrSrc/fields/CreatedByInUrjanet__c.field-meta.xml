@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreatedByInUrjanet__c</fullName>
+    <description
+    >A custom field for the system user responsible for creating the site in Arcadia&apos;s system.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The system user responsible for creating the site in Arcadia&apos;s system.</inlineHelpText>
+    <label>Created By in Arcadia</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

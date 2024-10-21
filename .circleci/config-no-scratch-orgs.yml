@@ -1,0 +1,156 @@
+# config.yml utilizing a checkonly deploy for unit testing, no creation of scratch orgs
+version: 2.1
+orbs:
+    slack: circleci/slack@4.4.4
+jobs:
+  build:
+    docker:
+      - image: cimg/node:lts-browsers
+    steps:
+      - checkout
+      - run:
+          name: "Install SFDX & PMD"
+          command: |
+            wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+            mkdir ~/sfdx
+            tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+            sudo ln -sf "$HOME/sfdx/bin/sfdx" "/usr/local/bin/sfdx"
+            ./pmd/pmd_install.sh
+            echo 'y' | sfdx plugins:install isvte-sfdx-plugin
+      - run:
+          name: "Install Build Dependencies"
+          command: |
+            npm install
+            mkdir -p /tmp/artifacts/test_results
+            mkdir -p /tmp/artifacts/pmd
+            mkdir -p /tmp/artifacts/csmd
+      - run:
+          name: "Authenticate to Orgs"
+          command: |
+            #authenticate to int
+            echo $SFDXURL_INTEGRATION > /tmp/sfdx_int.url
+            sfdx auth:sfdxurl:store -f /tmp/sfdx_int.url -a int_org
+
+            #authenticate to qa
+            if [[ $CIRCLE_BRANCH == "qa" ]];
+            then
+              echo $SFDXURL_QA > /tmp/sfdx_qa.url
+              sfdx auth:sfdxurl:store -f /tmp/sfdx_qa.url -a qa_org
+            fi
+
+            #authenticate to clientqa
+            if [[ $CIRCLE_BRANCH == "clientqa" ]];
+            then 
+              echo $SFDXURL_CLIENTQA > /tmp/sfdx_clientqa.url
+              sfdx auth:sfdxurl:store -f /tmp/sfdx_clientqa.url -a clientqa_org
+            fi
+
+            #authenticate to packaging
+            if [[ $CIRCLE_BRANCH == "packaging" ]];
+            then 
+              echo $SFDXURL_PACKAGING > /tmp/sfdx_packaging.url
+              sfdx auth:sfdxurl:store -f /tmp/sfdx_packaging.url -a packaging_org
+            fi
+      - run:
+          name: "Run PMD Source Code Scanner"
+          command: |
+            #run pmd source scanner
+            echo "Running PMD source code scanner"
+            ./pmd/pmd_scan.sh -o /tmp/artifacts/pmd
+            # UNCOMMENT OTHER DIRECTORIES AS NEEDED
+            ./pmd/pmd_scan.sh -s force-app/main/CRUDFLS -o /tmp/artifacts/pmd -f PMD_results_CRUDFLS.html -r pmd/pmd_rules.CRUDFLS.xml
+            ./pmd/pmd_scan.sh -s force-app/main/CSDomainSelector -o /tmp/artifacts/pmd -f PMD_results_CSDomainSelector.html -r pmd/pmd_rules.CRUDFLS.xml
+            #./pmd/pmd_scan.sh -s force-app/main/CSLogger -o /tmp/artifacts/pmd -f PMD_results_CSLogger.html -r pmd/pmd_rules.CRUDFLS.xml
+            ./pmd/pmd_scan.sh -s force-app/main/CSUtils -o /tmp/artifacts/pmd -f PMD_results_CSUtils.html -r pmd/pmd_rules.CRUDFLS.xml
+            #./pmd/pmd_scan.sh -s force-app/main/QueueScience -o /tmp/artifacts/pmd -f PMD_results_QueueScience.html -r pmd/pmd_rules.CRUDFLS.xml
+      - run:
+          name: 'Run Metadata Scan for SecRev issues'
+          command: |
+            echo "Run Metadata Scan for common security review and quality pitfalls"
+            ./dx-utils/grep_secrev_issues.sh -o /tmp/artifacts/csmd
+      - run:
+          name: "Run LWC Jest Unit Tests"
+          command: npm run test:unit
+          environment:
+              JEST_JUNIT_OUTPUT_DIR: /tmp/artifacts/test_results/
+      - store_test_results:
+          path: /tmp/artifacts/test_results/
+      - run:
+          name: 'Convert DX Code To Metadata API'
+          command: |
+            #convert DX to legacy metadata
+            ./dx-utils/convert_to_metadata.sh
+            cp -pr deploy /tmp/artifacts/deploy
+      - run:
+          name: 'ISV Technical Enablement Scan'
+          command: |
+            sfdx isvte:mdscan -d deploy >> /tmp/artifacts/isvte.txt
+      - run:
+          name: 'Scan Metadata for Packageability'
+          command: |
+            npm run mdcoverage -- -p deploy/package.xml -o /tmp/artifacts/unpackageable-components.json -t /tmp/artifacts/packageability.txt
+      - run:
+          name: "Deploy To Non-scratch Orgs"
+          command: |
+            #feature branch - CHECKONLY against Integration
+            echo "Checking branch"
+            if [[ ($CIRCLE_BRANCH != "integration" && 
+                   $CIRCLE_BRANCH != "qa" &&
+                   $CIRCLE_BRANCH != "clientqa" && 
+                   $CIRCLE_BRANCH != "packaging") ]];
+            then
+              #deploy CHECKONLY source to int org, including destructive changes
+              echo "On feature branch $CIRCLE_BRANCH - CHECKONLY - Deploy source from $CIRCLE_BRANCH/force-app to int org"
+              ./dx-utils/deploy.sh int_org checkonly
+
+            fi
+
+            #integration
+            if [[ $CIRCLE_BRANCH == "integration" ]];
+            then 
+              #deploy source from integration branch to int org, including destructive changes
+              echo "deploy source from $CIRCLE_BRANCH/force-app to int org"
+              ./dx-utils/deploy.sh int_org 
+            fi
+
+            #qa
+            if [[ $CIRCLE_BRANCH == "qa" ]];
+            then 
+              #deploy source from qa branch to qa org, including destructive changes
+              echo "deploy source from $CIRCLE_BRANCH/force-app to qa org"
+              ./dx-utils/deploy.sh qa_org
+            fi
+
+            #clientqa
+            if [[ $CIRCLE_BRANCH == "clientqa" ]];
+            then 
+              #deploy source from clientqa branch to clientqa org, including destructive changes
+              echo "deploy source from $CIRCLE_BRANCH/force-app to clientqa org"
+              ./dx-utils/deploy.sh clientqa_org
+            fi
+
+            #packaging
+            if [[ $CIRCLE_BRANCH == "packaging" ]];
+            then 
+              #deploy source from packaging branch to packaging org, including destructive changes
+              echo "deploy source from $CIRCLE_BRANCH/force-app to packaging org"
+              ./dx-utils/deploy.sh packaging_org
+            fi
+      - store_artifacts:
+          destination: ./artifacts
+          path: /tmp/artifacts
+      - slack/notify:
+            event: fail
+            template: basic_fail_1
+            branch_pattern: 'integration,qa,main'
+      - slack/notify:
+            event: pass
+            template: basic_success_1
+            branch_pattern: 'integration,qa,main'
+
+workflows:
+  build_and_test:
+    jobs:
+      - build:
+          context:
+            - cs-slack-context

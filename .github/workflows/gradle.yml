@@ -1,0 +1,73 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
+
+name: Selenium UI Tests with Gradle
+
+on:
+    # push:
+    #     branches: ['ENTUC-SelGitAct']
+    # pull_request:
+    #     branches: ['integration']
+
+jobs:
+    build:
+        runs-on:
+            group: shared-minimal-ubuntu-latest
+
+        permissions:
+            contents: read
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up JDK 17
+              uses: actions/setup-java@v4
+              with:
+                  java-version: '17'
+                  distribution: 'temurin'
+                  cache: 'gradle'
+
+            - name: update the libraries
+              run: |
+                  sudo apt update
+                  sudo apt install libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm-dev libxkbcommon-x11-0 libxcomposite-dev -y
+                  sudo apt install libxdamage1 libxrandr2 libgbm-dev libpangocairo-1.0-0 libasound2 -y
+
+            - uses: browser-actions/setup-chrome@v1
+              with:
+                  chrome-version: 121
+
+            - name: find the chrome version
+              run: chrome --version
+
+            # - name: get Ip address of the machine
+            #   run: curl https://icanhazip.com
+
+            - name: Set up Gradle
+              env:
+                  GRADLE_PROPERTIES: ${{ secrets.GRADLE_PROPS_JAVA_17 }}
+              shell: bash
+              run: |
+                  mkdir -p ~/.gradle/
+                  echo "GRADLE_USER_HOME=${HOME}/.gradle" >> $GITHUB_ENV
+                  echo "${GRADLE_PROPERTIES}" | base64 --decode > ~/.gradle/gradle.properties
+
+            - name: Build with Gradle Wrapper
+              run: ./ValkyrieSelenium/gradlew -p ./ValkyrieSelenium clean test -PgitAction=true -PbaseUrl=${{ secrets.SALESFORCE_BASE_URL }} -Pusername=${{ secrets.SALESFORCE_USERNAME }} -Ppassword=${{ secrets.SALESFORCE_PASSWORD}} -PbulkCredUserName1=${{secrets.BULK_CRED_USERNAME1}} -PbulkCredPassword1=${{secrets.BULK_CRED_PASSWORD1}} -PserviceProviderId=${{secrets.SERVICE_PROVIDER_ID}}
+
+            - name: Upload test results as artifact
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: selenium-test-cases-report
+                  path: ValkyrieSelenium/app/build/reports/tests/test/index.html
+
+            - name: Upload failed tests cases screenshots as artifact
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: failed-test-cases-screenshots
+                  path: ValkyrieSelenium/app/src/test/resources/*.png

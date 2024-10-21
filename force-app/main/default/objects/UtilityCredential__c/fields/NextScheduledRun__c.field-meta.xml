@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NextScheduledRun__c</fullName>
+    <description>The time that this credential is next scheduled to be ran in our system.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The time that this credential is next scheduled to be ran in our system.</inlineHelpText>
+    <label>Next Scheduled Run</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

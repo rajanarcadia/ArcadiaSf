@@ -1,0 +1,33 @@
+{
+    "_embedded": {
+      "files": [
+        {
+         "createdDate": "2022-03-15T15:04:39.000+00:00",
+         "createdBy" : "TestUser",
+          "entityId": "1234abc-234a-dd77-9d9e-62fff58971ae",
+          "fileDetails":["Test File for Utility Statement"],
+          "fileName" : "TestFile",
+          "fileStatus" : "Drafted",
+          "providerName" :"HCL",
+          "_links": {
+            "self": {
+              "href": "https://test.urjanet.com/utility/statements/1234abc-234a-dd77-9d9e-62fff58971ae"
+            },
+            "accounts": {
+              "href": "https://test.urjanet.com/utility/statements/1234abc-234a-dd77-9d9e-62fff58971ae/accounts"
+            },
+            "source": {
+              "href": "https://test.urjanet.com/utility/statements/1234abc-234a-dd77-9d9e-62fff58971ae/source"
+            }
+          },
+          "_provider":{
+            "country":"India",
+            "entityId": "1234abc-234a-dd77-9d9e-62fff58971aa",
+            "providerName":"HCL",
+            "supportsCredentialValidation":true,
+            "website":"www.hcl.com"
+          }
+        }        
+      ]
+    }
+  }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UtilityMeter__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Utility Meter for this Utility Meter Usage record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Utility Meter for this Utility Meter Usage record.</inlineHelpText>
+    <label>Utility Meter</label>
+    <referenceTo>UtilityMeter__c</referenceTo>
+    <relationshipLabel>Utility Meter Usages</relationshipLabel>
+    <relationshipName>UtilityMeterUsages</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

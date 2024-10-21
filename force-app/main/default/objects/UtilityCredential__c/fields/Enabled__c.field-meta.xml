@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether data will continue to be extracted behind this credential.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates whether data will continue to be extracted behind this credential.</inlineHelpText>
+    <label>Enabled</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

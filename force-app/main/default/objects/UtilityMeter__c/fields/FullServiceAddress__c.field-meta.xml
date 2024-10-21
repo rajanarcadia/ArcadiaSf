@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FullServiceAddress__c</fullName>
+    <description>The full address of the service address for this site</description>
+    <externalId>false</externalId>
+    <formula>StreetLine1__c + &quot;, &quot; +
+IF( NOT( ISNULL(StreetLine2__c) ) ,StreetLine2__c + BR() , BR()) + 
+City__c + &quot;, &quot; + State__c  + &quot;, &quot; + PostalCode__c +  BR() + 
+Country__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The full address of the service address for this site</inlineHelpText>
+    <label>Full Service Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

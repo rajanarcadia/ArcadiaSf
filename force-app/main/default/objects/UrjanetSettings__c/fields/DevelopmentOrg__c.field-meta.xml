@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DevelopmentOrg__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to indicate if the org is a development Org</description>
+    <externalId>false</externalId>
+    <label>DevelopmentOrg</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

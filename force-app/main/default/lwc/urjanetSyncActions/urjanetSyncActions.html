@@ -1,0 +1,53 @@
+<template>
+    <article class="slds-card slds-var-p-around_x-small">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div>
+                    <img class="logo" alt={label.LABEL_URJANET_NAME} src={URJANET_LOGO} />
+                </div>
+                <div class="slds-media__body">
+                    <div class="slds-text-heading_medium slds-var-p-horizontal_medium slds-text-color_weak">
+                        {label.LABEL_SYNC_ACTION_HEADER}
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">{label.LABEL_SYNC_ACTION_SUB_HEADER}</div>
+        <div class="slds-card__body slds-card__body_inner slds-var-p-top_medium">
+            <div class="slds-text-heading_medium">{label.LABEL_PUSH_SITES_TO_URJANET}</div>
+            <div class="slds-text-body_regular slds-var-p-top_x-small slds-text-color_weak">
+                {label.LABEL_PUSH_SITES_TO_URJANET_DESC}
+            </div>
+            <div class="slds-var-p-top_x-small">
+                <lightning-button
+                    variant="brand"
+                    label={label.LABEL_PUSH_SITES_TO_URJANET}
+                    title={label.LABEL_PUSH_SITES_TO_URJANET}
+                    onclick={handlePushSites}
+                ></lightning-button>
+            </div>
+        </div>
+        <div class="slds-var-p-horizontal_medium">
+            <hr />
+        </div>
+        <div class="slds-card__body slds-card__body_inner slds-var-p-bottom_medium">
+            <div class="slds-text-heading_medium">{label.LABEL_REFRESH_URJANET_DATA}</div>
+            <div class="slds-text-body_regular slds-var-p-top_x-small slds-text-color_weak">
+                {label.LABEL_REFRESH_URJANET_DATA_DESC}
+            </div>
+            <div class="slds-var-p-top_x-small">
+                <lightning-button
+                    disabled={disableRefreshButton}
+                    variant="brand"
+                    label={label.LABEL_REFRESH_URJANET_DATA}
+                    title={label.LABEL_REFRESH_URJANET_DATA}
+                    onclick={handleRetrieveData}
+                ></lightning-button>
+            </div>
+        </div>
+        <div class="slds-var-p-horizontal_medium">
+            <hr />
+        </div>
+        <c-arcadia-bulk-credential-upload></c-arcadia-bulk-credential-upload>
+    </article>
+</template>

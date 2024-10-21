@@ -1,0 +1,70 @@
+{
+  "_embedded": {
+    "accounts": [
+      {
+        "entityId": "test-self",
+        "accountNumber": "Test-account-Id",
+        "normalizedAccountNumber": "5187939528",
+        "providerName": "Xcel Energy",
+        "status": "OK",
+        "statusDetail": "NO_ACTION_REQUIRED",
+        "enabled": true,
+        "prepaid": false,
+        "type": "NORMAL",
+        "lastModifiedDate": "2022-04-28T00:17:57.000+00:00",
+        "createdDate": "2022-04-01T19:54:20.000+00:00",
+        "createdBy": "system",
+        "lastModifiedBy": "system",
+        "meterCount": 6,
+        "firstExtracted": "2022-04-01T19:54:26.000+00:00",
+        "latestNewStatement": "2022-04-22T00:15:06.000+00:00",
+        "latestStatementDate": "2022-04-20",
+        "nextExpectedPostDate": "2022-05-20",
+        "customData": null,
+        "_links": {
+          "self": {
+            "href": "https://api.urjanet.com/utility/accounts/test-self"
+          },
+          "provider": {
+            "href": "https://api.urjanet.com/utility/providers/36edc6f1-ea0a-11e0-b6bb-12313d2b6294"
+          },
+          "credentials": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/credentials"
+          },
+          "events": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/events"
+          },
+          "customData": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/customData"
+          },
+          "accountData": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/accountData"
+          },
+          "meters": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/meters"
+          },
+          "sites": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/sites"
+          },
+          "statements": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/statements"
+          },
+          "payments": {
+            "href": "https://api.urjanet.com/utility/accounts/Test-account-Id/payments"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://api.urjanet.com/utility/credentials/Test-credential-Id/accounts?page=0&size=20"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 1,
+    "totalPages": 1,
+    "number": 0
+  }
+}

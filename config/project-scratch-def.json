@@ -1,0 +1,29 @@
+{
+    "orgName": "Urjanet Net Zero Connector",
+    "edition": "Developer",
+    "features": ["DebugApex", "EnableSetPasswordInApi", "SustainabilityApp"],
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        },
+        "userManagementSettings": {
+            "enableNewProfileUI": true
+        },
+        "chatterSettings": {
+            "enableChatter": true
+        },
+        "industriesSettings": {
+            "enableSustainabilityCloud": true,
+            "enableSCEmssnsForecasting": true,
+            "enableSCCreateFootprint": true,
+            "enableSCCarbonAccounting": true,
+            "enableSCScope3HubEnabled": true,
+            "enableSCTargetSetting": true,
+            "enableSCExternalEngMgmt": true,
+            "enableSCWaterManagement": true
+        }
+    }
+}

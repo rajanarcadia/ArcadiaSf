@@ -1,0 +1,85 @@
+{
+    "_embedded": {
+        "meters": [
+            {
+                "accountIds": [
+                    "1ecd6c27-b1e3-d774-ba69-12345678"
+                ],
+                "accountNumbers": [
+                    "14881808613"
+                ],
+                "bulbType": null,
+                "createdBy": "system",
+                "createdDate": "2022-05-18T15:52:12.000+00:00",
+                "customData": null,
+                "entityId": "1ecd6c27-b21e-d108-ba69-12345678",
+                "lastModifiedBy": "system",
+                "lastModifiedDate": "2022-05-18T15:52:20.000+00:00",
+                "meterConstantMultiplier": null,
+                "meterNumber": null,
+                "meterStatus": "CURRENT",
+                "nextExpectedPostDate": "2022-06-11",
+                "normalizedMeterNumber": null,
+                "normalizedPodNumber": "1486032306",
+                "normalizedPreviousMeterNumber": null,
+                "pipeType": null,
+                "podNumber": "1486032306",
+                "previousMeterConstantMultiplier": null,
+                "previousMeterNumber": null,
+                "provider": {
+                    "country": "USA",
+                    "entityId": "36e14460-ea0a-11e0-b6bb-12313d2b6294",
+                    "providerName": "San Francisco Public Utilty Commission",
+                    "supportsCredentialValidation": true,
+                    "website": null
+                  },
+                "providerName": "San Francisco Public Utilty Commission",
+                "serviceAddress": {
+                    "addressType": "PARTIAL",
+                    "city": null,
+                    "country": null,
+                    "fullAddress": "350 MISSION ST RETAIL, LOBBY",
+                    "postalCode": null,
+                    "recipient": null,
+                    "state": null,
+                    "streetLine1": "350 MISSION ST RETAIL",
+                    "streetLine2": "LOBBY"
+                },
+                "serviceDescription": null,
+                "serviceType": "electric",
+                "site": null,
+                "_links": {
+                    "self": {
+                        "href": "https://test.urjanet.com/utility/meters/1ecd6c27-b21e-d108-ba69-12345678"
+                    },
+                    "accounts": {
+                        "href": "https://test.urjanet.com/utility/meters/1ecd6c27-b21e-d108-ba69-12345678/accounts"
+                    },
+                    "credentials": {
+                        "href": "https://test.urjanet.com/utility/meters/1ecd6c27-b21e-d108-ba69-12345678/credentials"
+                    },
+                    "meterData": {
+                        "href": "https://test.urjanet.com/utility/meters/1ecd6c27-b21e-d108-ba69-12345678/meterData"
+                    },
+                    "provider": {
+                        "href": "https://test.urjanet.com/utility/providers/1e6316a3-b385-d289-8704-22000b109b8b"
+                    },
+                    "statements": {
+                        "href": "https://test.urjanet.com/utility/meters/1ecd6c27-b21e-d108-ba69-12345678/statements"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "https://test.urjanet.com/utility/accounts/1ecd6c27-b1e3-d774-ba69-12345678/meters?search=site.id%3Disnull%3Dtrue&page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
+}

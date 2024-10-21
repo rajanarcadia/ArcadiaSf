@@ -1,0 +1,9 @@
+{
+    "status": 400,
+    "message": "Bad request",
+    "error": "Bad request",
+    "exception": null,
+    "path": "",
+    "timestamp": "",
+    "data": null
+}

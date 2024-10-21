@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_Be_Ignored__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if an meter usage is to be ignored for downstream data creation (meaning Urjanet is considering the meter usage to be valid).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates if an meter usage is to be ignored for downstream data creation (meaning Urjanet is considering the meter usage to be valid).</inlineHelpText>
+    <label>To Be Ignored</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

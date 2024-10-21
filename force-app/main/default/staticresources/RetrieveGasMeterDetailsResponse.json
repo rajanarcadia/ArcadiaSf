@@ -1,0 +1,368 @@
+{
+  "_embedded": {
+    "meters": [
+      {
+        "amountDue": null,
+        "amountDueAfterDueDate": null,
+        "amountDueBeforeDueDate": null,
+        "bulbQuantity": null,
+        "bulbType": null,
+        "charges": [
+          {
+            "additionalRateMultiplier": null,
+            "averageUnitCost": null,
+            "chargeActualName": "Franchise Tax 3003 therms x .00402",
+            "chargeAmount": 12.0700,
+            "chargeAmountCurrency": "currency_dollars",
+            "chargeCurrencyCode": "USD",
+            "chargeGroupHeading": "TAXES & FEES",
+            "chargeName": "ch.franchise_charge",
+            "chargeRate": 0.0040200000,
+            "chargeRateAdder": null,
+            "chargeRateBase": null,
+            "chargeRateCurrency": "currency_dollars",
+            "chargeType": "DEBIT",
+            "chargeUnitsUsed": 3003.0000000000,
+            "contributionStatus": "CONTRIBUTING",
+            "createdDate": "2023-07-17T07:51:49.000+00:00",
+            "lifecycleStage": null,
+            "measurementType": "general_consumption",
+            "periodEnd": "2023-07-31",
+            "periodStart": "2023-07-01",
+            "tariff": {
+              "createdDate": "2022-03-26T05:41:22.000+00:00",
+              "provider": {
+                "country": "USA",
+                "entityId": "36d9a332-ea0a-11e0-b6bb-12313d2b6294",
+                "providerName": "Baltimore Gas & Electric (BGE)",
+                "supportsCredentialValidation": true,
+                "website": "https://secure.bge.com/accounts/login/agency?_ga=2.232572829.364483119.1660650306-1854192648.1660650305"
+              },
+              "providerAlias": "BaltGAndE",
+              "providerName": "Baltimore Gas & Electric (BGE)",
+              "tariffName": "General Service - Schedule C"
+            },
+            "tariffRateComponents": [
+              {
+                "tariffName": "General Service - Schedule C",
+                "tariffRateComponentType": "total"
+              }
+            ],
+            "unitsPerRate": null,
+            "usageUnit": "therms",
+            "prorationStatus": null
+          },
+          {
+            "additionalRateMultiplier": null,
+            "averageUnitCost": null,
+            "chargeActualName": "State Tax 6%",
+            "chargeAmount": 112.0900,
+            "chargeAmountCurrency": "currency_dollars",
+            "chargeCurrencyCode": "USD",
+            "chargeGroupHeading": "TAXES & FEES",
+            "chargeName": "ch.state_tax",
+            "chargeRate": null,
+            "chargeRateAdder": null,
+            "chargeRateBase": null,
+            "chargeRateCurrency": "currency_dollars",
+            "chargeType": "DEBIT",
+            "chargeUnitsUsed": null,
+            "contributionStatus": "CONTRIBUTING",
+            "createdDate": "2023-07-17T07:51:49.000+00:00",
+            "lifecycleStage": null,
+            "measurementType": null,
+            "periodEnd": "2023-07-31",
+            "periodStart": "2023-07-01",
+            "tariff": {
+              "createdDate": "2022-03-26T05:41:22.000+00:00",
+              "provider": {
+                "country": "USA",
+                "entityId": "36d9a332-ea0a-11e0-b6bb-12313d2b6294",
+                "providerName": "Baltimore Gas & Electric (BGE)",
+                "supportsCredentialValidation": true,
+                "website": "https://secure.bge.com/accounts/login/agency?_ga=2.232572829.364483119.1660650306-1854192648.1660650305"
+              },
+              "providerAlias": "BaltGAndE",
+              "providerName": "Baltimore Gas & Electric (BGE)",
+              "tariffName": "General Service - Schedule C"
+            },
+            "tariffRateComponents": [
+              {
+                "tariffName": "General Service - Schedule C",
+                "tariffRateComponentType": "not_available"
+              }
+            ],
+            "unitsPerRate": null,
+            "usageUnit": null,
+            "prorationStatus": null
+          },
+          {
+            "additionalRateMultiplier": null,
+            "averageUnitCost": null,
+            "chargeActualName": "STRIDE Charge",
+            "chargeAmount": 12.0000,
+            "chargeAmountCurrency": "currency_dollars",
+            "chargeCurrencyCode": "USD",
+            "chargeGroupHeading": "BGE GAS DELIVERY",
+            "chargeName": "ch.infrastructure_charge",
+            "chargeRate": null,
+            "chargeRateAdder": null,
+            "chargeRateBase": null,
+            "chargeRateCurrency": "currency_dollars",
+            "chargeType": "DEBIT",
+            "chargeUnitsUsed": null,
+            "contributionStatus": "CONTRIBUTING",
+            "createdDate": "2023-07-17T07:51:49.000+00:00",
+            "lifecycleStage": "lifecycle_combined_delivery",
+            "measurementType": null,
+            "periodEnd": "2023-07-31",
+            "periodStart": "2023-07-01",
+            "tariff": {
+              "createdDate": "2022-03-26T05:41:22.000+00:00",
+              "provider": {
+                "country": "USA",
+                "entityId": "36d9a332-ea0a-11e0-b6bb-12313d2b6294",
+                "providerName": "Baltimore Gas & Electric (BGE)",
+                "supportsCredentialValidation": true,
+                "website": "https://secure.bge.com/accounts/login/agency?_ga=2.232572829.364483119.1660650306-1854192648.1660650305"
+              },
+              "providerAlias": "BaltGAndE",
+              "providerName": "Baltimore Gas & Electric (BGE)",
+              "tariffName": "General Service - Schedule C"
+            },
+            "tariffRateComponents": [
+              {
+                "tariffName": "General Service - Schedule C",
+                "tariffRateComponentType": "not_available"
+              }
+            ],
+            "unitsPerRate": null,
+            "usageUnit": null,
+            "prorationStatus": null
+          },
+          {
+            "additionalRateMultiplier": null,
+            "averageUnitCost": null,
+            "chargeActualName": "Distribution Chg 3003 therms x .6014",
+            "chargeAmount": 1806.0000,
+            "chargeAmountCurrency": "currency_dollars",
+            "chargeCurrencyCode": "USD",
+            "chargeGroupHeading": "BGE GAS DELIVERY",
+            "chargeName": "ch.distribution_charge",
+            "chargeRate": 0.6014000000,
+            "chargeRateAdder": null,
+            "chargeRateBase": null,
+            "chargeRateCurrency": "currency_dollars",
+            "chargeType": "DEBIT",
+            "chargeUnitsUsed": 3003.0000000000,
+            "contributionStatus": "CONTRIBUTING",
+            "createdDate": "2023-07-17T07:51:49.000+00:00",
+            "lifecycleStage": "lifecycle_distribution",
+            "measurementType": "general_consumption",
+            "periodEnd": "2023-07-31",
+            "periodStart": "2023-07-01",
+            "tariff": {
+              "createdDate": "2022-03-26T05:41:22.000+00:00",
+              "provider": {
+                "country": "USA",
+                "entityId": "36d9a332-ea0a-11e0-b6bb-12313d2b6294",
+                "providerName": "Baltimore Gas & Electric (BGE)",
+                "supportsCredentialValidation": true,
+                "website": "https://secure.bge.com/accounts/login/agency?_ga=2.232572829.364483119.1660650306-1854192648.1660650305"
+              },
+              "providerAlias": "BaltGAndE",
+              "providerName": "Baltimore Gas & Electric (BGE)",
+              "tariffName": "General Service - Schedule C"
+            },
+            "tariffRateComponents": [
+              {
+                "tariffName": "General Service - Schedule C",
+                "tariffRateComponentType": "total"
+              }
+            ],
+            "unitsPerRate": null,
+            "usageUnit": "therms",
+            "prorationStatus": null
+          },
+          {
+            "additionalRateMultiplier": null,
+            "averageUnitCost": null,
+            "chargeActualName": "Customer Charge",
+            "chargeAmount": 38.0000,
+            "chargeAmountCurrency": "currency_dollars",
+            "chargeCurrencyCode": "USD",
+            "chargeGroupHeading": "BGE GAS DELIVERY",
+            "chargeName": "ch.customer_charge",
+            "chargeRate": null,
+            "chargeRateAdder": null,
+            "chargeRateBase": null,
+            "chargeRateCurrency": "currency_dollars",
+            "chargeType": "DEBIT",
+            "chargeUnitsUsed": null,
+            "contributionStatus": "CONTRIBUTING",
+            "createdDate": "2023-07-17T07:51:49.000+00:00",
+            "lifecycleStage": "lifecycle_combined_delivery",
+            "measurementType": null,
+            "periodEnd": "2023-07-31",
+            "periodStart": "2023-07-01",
+            "tariff": {
+              "createdDate": "2022-03-26T05:41:22.000+00:00",
+              "provider": {
+                "country": "USA",
+                "entityId": "36d9a332-ea0a-11e0-b6bb-12313d2b6294",
+                "providerName": "Baltimore Gas & Electric (BGE)",
+                "supportsCredentialValidation": true,
+                "website": "https://secure.bge.com/accounts/login/agency?_ga=2.232572829.364483119.1660650306-1854192648.1660650305"
+              },
+              "providerAlias": "BaltGAndE",
+              "providerName": "Baltimore Gas & Electric (BGE)",
+              "tariffName": "General Service - Schedule C"
+            },
+            "tariffRateComponents": [
+              {
+                "tariffName": "General Service - Schedule C",
+                "tariffRateComponentType": "not_available"
+              }
+            ],
+            "unitsPerRate": null,
+            "usageUnit": null,
+            "prorationStatus": null
+          }
+        ],
+        "contributionStatus": "CONTRIBUTING",
+        "createdDate": "2023-07-17T07:51:49.000+00:00",
+        "customerNumber": null,
+        "cycleNumber": null,
+        "deregulationStatus": "delivery",
+        "disconnectDate": null,
+        "discountBeforeDueDate": null,
+        "dueDate": null,
+        "energyAnniversaryDate": null,
+        "energyCarryForward": null,
+        "energyNewCarryForward": null,
+        "facilityName": null,
+        "facilityNumber": null,
+        "finalBillNotice": null,
+        "gridPointLineLoss": null,
+        "invoiceNumber": null,
+        "lineLoss": null,
+        "mapNumber": null,
+        "meterConstantMultiplier": null,
+        "meterConversionMultiplier": null,
+        "meterNumber": "980783",
+        "meterReadDate": "2023-07-05",
+        "newCharges": null,
+        "nextReadDate": "2023-08-03",
+        "normalizedMeterNumber": "980783",
+        "normalizedPodNumber": "6176333058",
+        "normalizedPreviousMeterNumber": null,
+        "outstandingBalance": null,
+        "periodEnd": "2023-07-31",
+        "periodStart": "2023-07-01",
+        "pipeType": null,
+        "podNumber": "6176333058",
+        "powerFactor": null,
+        "prevReadDate": null,
+        "previousBalance": null,
+        "previousMeterConstantMultiplier": null,
+        "previousMeterNumber": null,
+        "rateOrTariffActualName": "General Service - Schedule C",
+        "readTypeAsPrinted": null,
+        "serviceAddress": {
+          "addressType": "FULL",
+          "city": "COLUMBIA",
+          "country": null,
+          "fullAddress": "10300 LITTLE-PATUXENT PKWY STORE 2530, COLUMBIA, MD, 21044",
+          "postalCode": "21044",
+          "recipient": null,
+          "state": "MD",
+          "streetLine1": "10300 LITTLE-PATUXENT PKWY STORE 2530",
+          "streetLine2": null
+        },
+        "serviceDescription": null,
+        "serviceType": "natural_gas",
+        "statementDate": "2023-07-07",
+        "statementId": "1ee2476c-7cd5-de94-9d78-feff9ebfdc8a",
+        "tariff": {
+          "createdDate": "2022-03-26T05:41:22.000+00:00",
+          "provider": {
+            "country": "USA",
+            "entityId": "36d9a332-ea0a-11e0-b6bb-12313d2b6294",
+            "providerName": "Baltimore Gas & Electric (BGE)",
+            "supportsCredentialValidation": true,
+            "website": "https://secure.bge.com/accounts/login/agency?_ga=2.232572829.364483119.1660650306-1854192648.1660650305"
+          },
+          "providerAlias": "BaltGAndE",
+          "providerName": "Baltimore Gas & Electric (BGE)",
+          "tariffName": "General Service - Schedule C"
+        },
+        "totalCharges": 1980.1600,
+        "totalUsage": 3003.0000000000,
+        "totalUsageUnit": "therms",
+        "usages": [
+          {
+            "calorificValue": null,
+            "citedUsage": null,
+            "contributionStatus": "CONTRIBUTING",
+            "createdDate": "2023-07-17T07:51:49.000+00:00",
+            "hoursOfUse": null,
+            "loadFactor": null,
+            "loadType": null,
+            "measuredUsage": 3003.0000000000,
+            "measurementType": "general_consumption",
+            "meterConstantMultiplier": 1.1250000000,
+            "meterConversionMultiplier": 1.0160000000,
+            "meterReadDate": "2023-07-05",
+            "meterReadType": "actual",
+            "meterReadingDelta": 2628.0000000000,
+            "meterReadingDeltaPrevious": null,
+            "meterReadingDeltaUsageUnit": "ccf",
+            "meterReadingRaw": 79345.0000000000,
+            "meterReadingRawPrevious": 76717.0000000000,
+            "numberOfDaysInPeriod": 30.0000,
+            "outageBlock": null,
+            "periodEnd": "2023-07-31",
+            "periodStart": "2023-07-01",
+            "powerFactor": null,
+            "pressureMultiplier": null,
+            "prevReadDate": null,
+            "previousMeterReadType": "actual",
+            "previousReadTypeAsPrinted": null,
+            "previousUsage": null,
+            "rateOrTariffActualName": null,
+            "readTypeAsPrinted": "Read",
+            "readingSchedule": null,
+            "tariffRateComponents": [
+              {
+                "tariffName": "General Service - Schedule C",
+                "tariffRateComponentType": "total"
+              }
+            ],
+            "usageActualName": null,
+            "usageUnit": "therms",
+            "prorationStatus": null
+          }
+        ],
+        "_links": {
+          "meter": {
+            "href": "https://api.urjanet.com/utility/meters/1ee2476c-9025-dc51-8f50-b68a58af795d"
+          },
+          "statement": {
+            "href": "https://api.urjanet.com/utility/statements/1ee2476c-7cd5-de94-9d78-feff9ebfdc8a"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://api.urjanet.com/utility/meters/1ee2476c-9025-dc51-8f50-b68a58af795d/meterData?page=0&size=100&sort=measurementPeriod.intervalStart,asc"
+    }
+  },
+  "page": {
+    "size": 100,
+    "totalElements": 2,
+    "totalPages": 1,
+    "number": 0
+  }
+}

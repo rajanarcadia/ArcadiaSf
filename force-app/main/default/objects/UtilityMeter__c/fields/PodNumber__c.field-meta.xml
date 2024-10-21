@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PodNumber__c</fullName>
+    <description>The point of delivery number in deregulated markets. This is an independent identifier for meter location and used by all utility companies in deregulated markets.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The point of delivery number in deregulated markets. This is an independent identifier for meter location and used by all utility companies in deregulated markets.</inlineHelpText>
+    <label>Pod Number</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

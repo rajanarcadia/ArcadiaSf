@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISBLANK(StationaryAssetEnvironmentalSource__c),
+    IMAGE(
+        IF(
+            $Setup.UrjanetSettings__c.DevelopmentOrg__c = FALSE,
+            &quot;/resource/urjanet__UrjanetNZCAssets/UrjanetNZCAssets/img/arcadia_wrong_symbol.png&quot;,
+            &quot;/resource/UrjanetNZCAssets/UrjanetNZCAssets/img/arcadia_wrong_symbol.png&quot;
+        ),
+        &quot;Cross Image&quot;,
+        10,
+        10
+    ) &amp; &quot; Must be linked to stationary asset&quot;,
+    IMAGE(
+        IF(
+            $Setup.UrjanetSettings__c.DevelopmentOrg__c = FALSE,
+            &quot;/resource/urjanet__UrjanetNZCAssets/UrjanetNZCAssets/img/arcadia_right_symbol.png&quot;,
+            &quot;/resource/UrjanetNZCAssets/UrjanetNZCAssets/img/arcadia_right_symbol.png&quot;
+        ),
+        &quot;Tick Image&quot;,
+        10,
+        10
+    ) &amp; &quot; OK&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Connection Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

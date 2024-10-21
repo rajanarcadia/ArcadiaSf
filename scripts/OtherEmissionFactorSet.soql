@@ -1,0 +1,2 @@
+SELECT Ch4GlblWarmingPot, EmissionFactorDataSource, EmissionFactorUpdateYear, N2oGlblWarmingPot, Name, RefrigerantLeakageRtInKgItKwh, RefrigerantLeakageRtInKgM2, RefrigerantLeakageRtInKgSqft
+  FROM OtherEmssnFctrSet

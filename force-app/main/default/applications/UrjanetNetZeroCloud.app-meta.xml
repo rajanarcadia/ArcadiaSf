@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#004137</headerColor>
+        <logo>ARC_LOGOTYPE_LUSH_GREEN_RGB</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>Arcadia for Net Zero Cloud</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Arcadia</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Supplier</tabs>
+    <tabs>UtilityCredential__c</tabs>
+    <tabs>UtilityAccount__c</tabs>
+    <tabs>UtilityMeter__c</tabs>
+    <tabs>UtilityMeterUsage__c</tabs>
+    <tabs>Urjanet_Administration</tabs>
+    <tabs>Log__c</tabs>
+    <tabs>standard-StnryAssetEnrgyUse</tabs>
+    <tabs>standard-StnryAssetEnvrSrc</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Urjanet_UtilityBar</utilityBar>
+</CustomApplication>

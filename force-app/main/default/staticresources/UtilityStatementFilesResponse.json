@@ -1,0 +1,51 @@
+{
+    "_embedded": {
+        "files": [
+            {
+                "createdDate": "2023-02-13T23:56:03.000+00:00",
+                "createdBy": "cs.support",
+                "entityId": "1edabf9f-90a6-dddd-b173-2e3846f367a4",
+                "fileDetails": ["Some File Details"],
+                "fileName": "single-meter-with-sewer-YDI_69788-CityOfPortlandOR_1.pdf",
+                "fileStatus": "SUCCESS",
+                "id": "1edabf9f-90a6-dddd-b173-2e3846f367a4",
+                "provider": {
+                    "country": "USA",
+                    "entityId": "a3f14244-a674-11e1-ace6-12313d02ea33",
+                    "providerName": "City of Portland, Oregon",
+                    "supportsCredentialValidation": false,
+                    "website": "https://css.portlandoregon.gov:8443/css/public/login/form"
+                },
+                "providerName": "City of Portland, Oregon",
+                "_links": {
+                    "self": {
+                        "href": "https://api.urjanet.com/utility/files/1edabf9f-90a6-dddd-b173-2e3846f367a4"
+                    },
+                    "source": {
+                        "href": "https://api.urjanet.com/utility/files/1edabf9f-90a6-dddd-b173-2e3846f367a4/source"
+                    },
+                    "statement": {
+                        "href": "https://api.urjanet.com/utility/statements/1edabfa0-2ea5-daf7-a7b6-8ef2c098b4ca"
+                    },
+                    "accounts": {
+                        "href": "https://api.urjanet.com/utility/statements/1edabfa0-2ea5-daf7-a7b6-8ef2c098b4ca/accounts"
+                    },
+                    "meters": {
+                        "href": "https://api.urjanet.com/utility/statements/1edabfa0-2ea5-daf7-a7b6-8ef2c098b4ca/meters"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "https://api.urjanet.com/utility/files?search=id%3Din%3D(1edabf9f-90a6-dddd-b173-2e3846f367a4)&page=0&size=20"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 1,
+        "totalPages": 1,
+        "number": 0
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "status": 400,
+    "message": "Account with id 1ecd6c27-b1e3-d774-ba69-c2cad382101 not found",
+    "error": "Bad request",
+    "exception": null,
+    "path": "/api/public/v1/accounts/1ecd6c27-b1e3-d774-ba69-c2cad382101/meters",
+    "timestamp": "2022-06-07T21:33:12.674+00:00",
+    "data": null
+}

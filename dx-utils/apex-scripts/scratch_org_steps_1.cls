@@ -1,0 +1,1 @@
+ScratchOrgAutomationSteps.Step1_UserPermission_Assignment(); 

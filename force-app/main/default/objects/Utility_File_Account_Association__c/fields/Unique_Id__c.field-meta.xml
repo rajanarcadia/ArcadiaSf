@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unique_Id__c</fullName>
+    <businessStatus>Hidden</businessStatus>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique id field used for Duplicate Check</description>
+    <externalId>false</externalId>
+    <label>Unique ID</label>
+    <length>50</length>
+    <required>true</required>
+    <securityClassification>Confidential</securityClassification>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

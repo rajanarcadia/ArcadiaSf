@@ -1,0 +1,44 @@
+{
+  "createdBy": "Urjanet.test",
+  "createdDate": "2022-06-08T02:45:54.539+00:00",
+  "entityId": "1ece6d51-dd82-d644-8a08-d23d6f619b36",
+  "facilityType": "Office",
+  "lastModifiedBy": "Urjanet.test",
+  "lastModifiedDate": "2022-06-08T02:45:54.539+00:00",
+  "region": "AMER",
+  "serviceAddress": {
+      "addressType": "FULL",
+      "city": "SAN RAMON",
+      "country": null,
+      "fullAddress": "340 MAIN ST, SUITE 13, SAN RAMON, CA, 94583",
+      "postalCode": "94583",
+      "recipient": null,
+      "state": "CA",
+      "streetLine1": "340 MAIN ST",
+      "streetLine2": "SUITE 13"
+  },
+  "siteCode": "123789",
+  "siteName": "Urjanet Test",
+  "siteNumber": "NZC12345",
+  "subRegion": "NorCal",
+  "_links": {
+      "self": {
+          "href": "https://api.urjanet.com/utility/sites/1ece6d51-dd82-d644-8a08-d23d6f619b36"
+      },
+      "accounts": {
+          "href": "https://api.urjanet.com/utility/sites/1ece6d51-dd82-d644-8a08-d23d6f619b36/accounts"
+      },
+      "credentials": {
+          "href": "https://api.urjanet.com/utility/sites/1ece6d51-dd82-d644-8a08-d23d6f619b36/credentials"
+      },
+      "events": {
+          "href": "https://api.urjanet.com/utility/sites/1ece6d51-dd82-d644-8a08-d23d6f619b36/events"
+      },
+      "meters": {
+          "href": "https://api.urjanet.com/utility/sites/1ece6d51-dd82-d644-8a08-d23d6f619b36/meters"
+      },
+      "statements": {
+          "href": "https://api.urjanet.com/utility/sites/1ece6d51-dd82-d644-8a08-d23d6f619b36/statements"
+      }
+  }
+}

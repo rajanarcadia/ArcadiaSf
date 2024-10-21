@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Utility_Statement_File__c</fullName>
+    <description>Utilty Statement File</description>
+    <externalId>false</externalId>
+    <label>Utility Statement File</label>
+    <referenceTo>UtilityStatementFile__c</referenceTo>
+    <relationshipLabel>Utility File Account Associations</relationshipLabel>
+    <relationshipName>Utility_File_Account_Associations</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

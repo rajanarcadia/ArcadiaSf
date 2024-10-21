@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UtilityAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>To relate this Stationary Asset Environmental Source to a Utility Account</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To relate this Stationary Asset Environmental Source to a Utility Account</inlineHelpText>
+    <label>Utility Account</label>
+    <referenceTo>UtilityAccount__c</referenceTo>
+    <relationshipLabel>Stationary Asset Environmental Sources</relationshipLabel>
+    <relationshipName>Stationary_Asset_Environmental_Sources</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

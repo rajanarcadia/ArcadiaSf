@@ -1,0 +1,73 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    },
+    {
+      "path": "force-app/main",
+      "package": "Urjanet",
+      "versionName": "ver 2.18.0",
+      "versionNumber": "2.18.0.NEXT",
+      "default": false,
+      "unpackagedMetadata": {
+        "path": "force-app/unpackaged"
+      },
+      "apexTestAccess": {
+        "permissionSetLicenses": [
+          "NetZeroCloudUserPsl"
+        ]
+      },
+      "ancestorVersion": "HIGHEST"
+    },
+    {
+      "path": "force-app/canvas-package-test",
+      "package": "CanvasPackageDevelopment",
+      "versionName": "ver 1.0",
+      "versionNumber": "1.0.0.NEXT",
+      "default": false
+    }
+  ],
+  "namespace": "urjanet",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "56.0",
+  "packageAliases": {
+    "Urjanet": "0Ho8b000000GmgcCAC",
+    "UrjanetConnectDevManaged": "0Ho8b000000GmgrCAC",
+    "UrjanetConnectDevManaged@1.0.0-1": "04t8b000000qStJAAU",
+    "UrjanetConnectDevManaged@1.1.0-1": "04t8b000000qSxQAAU",
+    "UrjanetConnectDevManaged@1.2.0-1": "04t8b000000qSy4AAE",
+    "CanvasPackageDevelopment": "0Ho8b000000Gmh6CAC",
+    "CanvasPackageDevelopment@1.0.0-1": "04t8b000000qSy9AAE",
+    "Urjanet@0.1.0-1": "04t8b000001ecdrAAA",
+    "Urjanet@1.4.0-1": "04t8b000001ecfnAAA",
+    "Urjanet@1.5.0-1": "04t8b000001ecg7AAA",
+    "Urjanet@1.6.0-1": "04t8b000001VobzAAC",
+    "Urjanet@1.7.0-1": "04t8b000001Voh9AAC",
+    "Urjanet@1.8.0-1": "04t8b000001VoiCAAS",
+    "Urjanet@1.8.0-2": "04t8b000001VojZAAS",
+    "Urjanet@1.8.1-1": "04t8b000000uWVoAAM",
+    "Urjanet@2.0.0-1": "04t8b000000qVimAAE",
+    "Urjanet@2.1.0-1": "04t8b000000qVoMAAU",
+    "Urjanet@2.2.0-1": "04t8b000000qVobAAE",
+    "Urjanet@2.3.0-1": "04t8b000000qVolAAE",
+    "Urjanet@2.4.0-1": "04t8b000000qVovAAE",
+    "Urjanet@2.5.0-1": "04t8b000000qVp5AAE",
+    "Urjanet@2.6.0-1": "04t8b000000qVpFAAU",
+    "Urjanet@2.7.0-1": "04t8b000000qVpZAAU",
+    "Urjanet@2.8.0-1": "04t8b000000qVpjAAE",
+    "Urjanet@2.9.0-1": "04t8b000000ytANAAY",
+    "Urjanet@2.10.0-3": "04t8b000000ytJKAAY",
+    "Urjanet@2.10.1-1": "04t8b000000ytNHAAY",
+    "Urjanet@2.11.0-3": "04t8b000000ytQLAAY",
+    "Urjanet@2.12.0-2": "04t8b000000ytT5AAI",
+    "Urjanet@2.13.0-6": "04tUo000000046rIAA",
+    "Urjanet@2.14.0-4": "04tUo0000000BDBIA2",
+    "Urjanet@2.14.2-1": "04tUo0000000JXJIA2",
+    "Urjanet@2.15.0-1": "04tUo0000000QtlIAE",
+    "Urjanet@2.15.1-1": "04tUo0000000VF7IAM",
+    "Urjanet@2.16.0-10": "04tUo0000000u3pIAA",
+    "Urjanet@2.17.0-2": "04tUo00000019MDIAY",
+    "Urjanet@2.18.0-6": "04tUo0000001tiPIAQ"
+  }
+}

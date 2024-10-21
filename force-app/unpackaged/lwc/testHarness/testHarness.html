@@ -1,0 +1,121 @@
+<template>
+    <div class="slds-box slds-m-bottom_xx-large">
+        <div class="slds-grid container slds-wrap">
+            <div class="slds-col slds-size_12-of-12">
+                <div class="slds-grid harness slds-wrap">
+                    <div class="slds-col slds-size_7-of-12 slds-align-bottom slds-var-p-around_x-small">
+                        <lightning-button
+                            variant="brand"
+                            label="Send Authentication Token Request"
+                            title="Primary action"
+                            class="slds-var-m-bottom_x-small"
+                            onclick={sendAccessTokenRequest}
+                        >
+                        </lightning-button>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-align-bottom slds-border_top">
+                        <lightning-textarea
+                            variant="brand"
+                            label="Authentication Token"
+                            title="Primary action"
+                            class="slds-var-m-left_x-small"
+                            value={accessToken}
+                        >
+                        </lightning-textarea>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-align-bottom slds-border_top">
+                        <lightning-input
+                            type="text"
+                            label="Correlation Id"
+                            placeholder="type your Correlation Id here..."
+                            onchange={handleInputChange}
+                        >
+                        </lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_7-of-12 slds-align-bottom slds-var-p-around_x-small">
+                        <lightning-button
+                            variant="brand"
+                            label="Send Correlation Id to Get Credential Response"
+                            title="Primary action"
+                            class="slds-var-m-bottom_x-small"
+                            onclick={sendCredentialsRequest}
+                        >
+                        </lightning-button>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-align-bottom slds-border_top">
+                        <lightning-input
+                            type="text"
+                            label="Credential Id"
+                            placeholder="type your credential Id here..."
+                            onchange={handleInputChange}
+                        >
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_7-of-12 slds-align-bottom slds-var-p-around_x-small">
+                        <lightning-button
+                            variant="brand"
+                            label="Send Credential Id to Get Accounts Response"
+                            title="Primary action"
+                            class="slds-var-m-bottom_x-small slds-var-p-around_x-small"
+                            onclick={sendAccountsByCredsRequest}
+                        >
+                        </lightning-button>
+                        <lightning-button
+                            variant="brand"
+                            label="Send Credential Id to Get Update Url Response"
+                            title="Primary action"
+                            class="slds-var-m-bottom_x-small slds-var-p-around_x-small"
+                            onclick={sendUpdateUrlByCredRequest}
+                        >
+                        </lightning-button>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-align-bottom slds-border_top">
+                        <lightning-input
+                            type="text"
+                            label="Account Id"
+                            placeholder="type your Account Id here..."
+                            onchange={handleInputChange}
+                        >
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_7-of-12 slds-align-bottom slds-var-p-around_x-small">
+                        <lightning-button
+                            variant="brand"
+                            label="Send Account Id to Get Meter Response"
+                            title="Primary action"
+                            class="slds-var-m-bottom_x-small slds-var-p-around_x-small"
+                            onclick={sendMetersByAccountRequest}
+                        >
+                        </lightning-button>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-align-bottom slds-border_top">
+                        <lightning-input
+                            type="text"
+                            label="Meter Id"
+                            placeholder="type your Meter Id here..."
+                            onchange={handleInputChange}
+                        >
+                        </lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_7-of-12 slds-align-bottom slds-var-p-around_x-small">
+                        <lightning-button
+                            variant="brand"
+                            label="Send Meter Id to Meter Details Response"
+                            title="Primary action"
+                            class="slds-var-m-bottom_x-small slds-var-p-around_x-small"
+                            onclick={sendMeterDetailsRequest}
+                        >
+                        </lightning-button>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-align-bottom slds-border_top">
+                        <h2>Response Type: {responseType}</h2>
+                        <div class="slds-box">
+                            <pre id="json">{response}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProviderId__c</fullName>
+    <description>Provider ID for the meter on Arcadia System.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Provider ID for the meter on Arcadia System.</inlineHelpText>
+    <label>Arcadia Provider ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

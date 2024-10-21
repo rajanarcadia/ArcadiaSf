@@ -1,0 +1,93 @@
+{
+    "_embedded": {
+        "providers": [
+            {
+                "providerId": "03b89751-b5af-11e3-8311-22000aa40d1f",
+                "entityId": "03b89751-b5af-11e3-8311-22000aa40d1f",
+                "providerName": "City of Oxnard, California",
+                "supportsCredentialValidation": true,
+                "hasMultiFactorAuthentication": false,
+                "website": "https://oxna-egov.aspgov.com/Click2GovCX/logonuser.html",
+                "requiredFields": [
+                    "password",
+                    "username"
+                ],
+                "requiredFieldMetadata": [
+                    {
+                        "fieldName": "username",
+                        "fieldLabel": "eMail Address",
+                        "fieldNumber": 1,
+                        "fieldPart": 1
+                    },
+                    {
+                        "fieldName": "password",
+                        "fieldLabel": "Password",
+                        "fieldNumber": 2,
+                        "fieldPart": 1
+                    }
+                ],
+                "providerPaymentInfo": [],
+                "enabledSolutions": [
+                    "UTILITY",
+                    "CREDIT",
+                    "AP_AUTOMATION",
+                    "CREDIT_BUILDING",
+                    "IDENTITY"
+                ],
+                "serviceTypes": [
+                    "Water",
+                    "Irrigation",
+                    "Sewer",
+                    "Sanitation"
+                ],
+                "serviceTypeEnums": [
+                    "sanitation",
+                    "irrigation",
+                    "sewer",
+                    "water"
+                ],
+                "country": "USA",
+                "hasPrepaid": false,
+                "hasPostpaid": true,
+                "mock": false,
+                "supportsPaymentAction": false,
+                "_links": {
+                    "self": {
+                        "href": "https://api.urjanet.com/utility/providers/03b89751-b5af-11e3-8311-22000aa40d1f"
+                    }
+                }
+            },
+            {
+                "providerId": "da52b6e0-898b-11e3-ae56-22000aa40d1f",
+                "entityId": "da52b6e0-898b-11e3-ae56-22000aa40d1f",
+                "providerName": "Georgia Power",
+                "website": "https://georgia-power.com",
+                "_links": {
+                    "self": {
+                        "href": "https://api.urjanet.com/utility/providers/da52b6e0-898b-11e3-ae56-22000aa40d1f"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "first": {
+            "href": "https://api.urjanet.com/utility/providers?page=0&size=1"
+        },
+        "self": {
+            "href": "https://api.urjanet.com/utility/providers?page=0&size=1"
+        },
+        "next": {
+            "href": "https://api.urjanet.com/utility/providers?page=1&size=1"
+        },
+        "last": {
+            "href": "https://api.urjanet.com/utility/providers?page=1872&size=1"
+        }
+    },
+    "page": {
+        "size": 2,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}

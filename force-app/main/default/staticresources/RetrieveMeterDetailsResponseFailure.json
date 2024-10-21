@@ -1,0 +1,10 @@
+{
+  "status": 400,
+  "message": "Meter with id 1ecb1f59-401c-d3c9-9598-6ae1802271 not found",
+  "error": "Bad request",
+  "exception": null,
+  "path": "/api/public/v1/meters/1ecb1f59-401c-d3c9-9598-6ae1802271/meterData",
+  "timestamp": "2022-05-03T02:54:05.297+00:00",
+  "data": null,
+  "errorMsg": "Error Message"
+}

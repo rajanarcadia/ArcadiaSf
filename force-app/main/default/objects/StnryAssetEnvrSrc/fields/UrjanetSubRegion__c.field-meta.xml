@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UrjanetSubRegion__c</fullName>
+    <description>An optional custom field in the Arcadia system to input site’s sub region.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>An optional custom field in the Arcadia system to input site’s sub region.</inlineHelpText>
+    <label>Arcadia subRegion</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,33 @@
+<template>
+    <lightning-card variant="Narrow" title={labels.Arcadia_StatementUpload_Title}>
+        <template if:true={isLoading}>
+            <div class="slds-p-around_x-large">
+                <lightning-spinner
+                    alternative-text={labels.Arcadia_Generic_LoadingText}
+                    size="large"
+                    variant="brand"
+                ></lightning-spinner>
+            </div>
+        </template>
+
+        <lightning-layout multiple-rows vertical-align="start">
+            <lightning-layout-item size="8" class="slds-align_absolute-center" padding="around-small">
+                {labels.Arcadia_StatementUpload_HelpText}
+            </lightning-layout-item>
+
+            <lightning-layout-item size="8" class="slds-align_absolute-center" padding="around-small">
+                <lightning-input
+                    name="files"
+                    type="file"
+                    id="files"
+                    data-id="filesUpload"
+                    variant="label-hidden"
+                    onchange={handleFileChange}
+                    accept=".pdf"
+                >
+                </lightning-input
+                ><br />
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

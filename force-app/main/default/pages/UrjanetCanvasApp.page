@@ -1,0 +1,60 @@
+<apex:page controller="UrjanetCanvasAppController" showHeader="false" docType="html-5.0">
+    <html>
+        <head>
+            <apex:slds />
+        </head>
+        <div class="slds-scope">
+            <apex:form>
+                <div class="slds-p-top_x-large slds-align_absolute-center">
+                    <apex:image url="{!URLFOR($Resource.UrjanetNZCAssets,
+                        'UrjanetNZCAssets/img/arcadiaLogo.svg'
+                        )}"
+                        width="150px"
+                    />
+                </div>
+                <div class="{!if(CONTAINS(pathString, 'null'), 'slds-hide', '')}">
+                    <apex:canvasApp
+                        developerName="UrjanetConnect"
+                        namespacePrefix="{!thisNameSpace}"
+                        parameters="{!pathString}"
+                        height="580px"
+                        width="510px"
+                        scrolling="no"
+                    />
+                </div>
+                <div class="slds-p-left_x-large slds-p-top_small {!if(CONTAINS(pathString, 'null'),'','slds-hide')}">
+                    <span>
+                        <svg aria-hidden="true" class="slds-icon slds-icon-text-success slds-icon_small">
+                            <use
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#success"
+                            ></use>
+                        </svg>
+                    </span>
+                    <span class="slds-text-heading_medium">{!$Label.Canvas_ThankYou}</span>
+                    <div class="slds-var-p-left_x-large">{!$Label.Canvas_Response}</div>
+                </div>
+                <apex:actionFunction
+                    name="updateCredentialStatus"
+                    action="{!updateCredentialStatus}"
+                    rerender="false"
+                />
+                <script type="text/javascript" src="/canvas/sdk/js/54.0/canvas-all.js"></script>
+                <script type="text/javascript" src="/canvas/sdk/js/54.0/controller.js"></script>
+                <script>
+                    Sfdc?.canvas?.controller?.subscribe({
+                        name: '{!JSENCODE(thisNameSpace)}' + '.connectEvent',
+                        onData: function (event) {
+                            if (
+                                event.state === '{!JSENCODE(successMessage)}' ||
+                                event.state === '{!JSENCODE(failureMessage)}'
+                            ) {
+                                updateCredentialStatus();
+                            }
+                        }
+                    });
+                </script>
+            </apex:form>
+        </div>
+    </html>
+</apex:page>

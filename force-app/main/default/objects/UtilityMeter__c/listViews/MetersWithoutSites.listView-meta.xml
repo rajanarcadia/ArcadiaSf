@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MetersWithoutSites</fullName>
+    <columns>NAME</columns>
+    <columns>MeterStatus__c</columns>
+    <columns>ServiceType__c</columns>
+    <columns>StationaryAssetEnvironmentalSource__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MeterStatus__c</field>
+        <operation>equals</operation>
+        <value>CURRENT,NOT_CURRENT,FIX</value>
+    </filters>
+    <filters>
+        <field>StationaryAssetEnvironmentalSource__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Meters without Sites</label>
+</ListView>

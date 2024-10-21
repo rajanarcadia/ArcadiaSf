@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StationaryAssetEnvironmentalSource__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The Stationary Asset Environmental Source for this Utility Meter.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Stationary Asset Environmental Source for this Utility Meter.</inlineHelpText>
+    <label>Stationary Asset Environmental Source</label>
+    <referenceTo>StnryAssetEnvrSrc</referenceTo>
+    <relationshipLabel>Utility Meters</relationshipLabel>
+    <relationshipName>UtilityMeters</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,107 @@
+name: Salesforce CI/CD - Deploy to QA
+
+on:
+    push:
+        branches:
+            - qa
+        paths-ignore:
+            - 'ValkyrieSelenium/**'
+
+jobs:
+    build-and-deploy:
+        runs-on:
+            group: shared-minimal-ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 17
+                  cache: 'npm'
+            - run: npm install -g yarn
+            - run: npm install
+
+            - name: Install java
+              uses: actions/setup-java@v2
+              with:
+                  distribution: 'temurin'
+                  java-version: '11'
+
+            - name: Create Folders
+              run: |
+                  mkdir -p ./artifacts/test-results
+                  mkdir -p ./artifacts/pmd
+                  mkdir -p /tmp/artifacts/deploy
+                  mkdir -p /home/runner/.local/bin
+
+            - name: Install SFDX & PMD
+              run: |
+                  wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+                  mkdir ~/sfdx
+                  tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+                  ln -sf "$HOME/sfdx/bin/sfdx" "/home/runner/.local/bin/sfdx"
+                  ./pmd/pmd_install.sh
+                  yarn config set ignore-engines true
+                  # echo 'y' | sfdx plugins:install isvte-sfdx-plugin
+
+            - name: Run Jest Unit Tests
+              run: |
+                  chmod +xr ./node_modules/@salesforce/sfdx-lwc-jest/bin/sfdx-lwc-jest
+                  npm run test:unit
+
+            - name: Run PMD Scan
+              run: |
+                  #run pmd source scanner
+                  echo "Running PMD source code scanner"
+                  ./pmd/pmd_scan.sh -o /tmp/artifacts/pmd
+                  ./pmd/pmd_scan.sh -s force-app/main/CRUDFLS -o /tmp/artifacts/pmd -f PMD_results_CRUDFLS.html -r pmd/pmd_rules.CRUDFLS.xml
+                  ./pmd/pmd_scan.sh -s force-app/main/CSDomainSelector -o /tmp/artifacts/pmd -f PMD_results_CSDomainSelector.html -r pmd/pmd_rules.CRUDFLS.xml
+                  ./pmd/pmd_scan.sh -s force-app/main/CSUtils -o /tmp/artifacts/pmd -f PMD_results_CSUtils.html -r pmd/pmd_rules.CRUDFLS.xml
+                  ./pmd/pmd_scan.sh -s force-app/main/CSLogger -o /tmp/artifacts/pmd -f PMD_results_CSLogger.html -r pmd/pmd_rules.CRUDFLS.xml
+
+            - name: Run Metadata Scan for common security review and quality pitfalls
+              run: |
+                  mkdir -p /tmp/artifacts/csmd
+                  ./dx-utils/grep_secrev_issues.sh -o /tmp/artifacts/csmd
+
+            - name: save auth file ArcadiaQA
+              env:
+                  SALESFORCE_QA_AUTH_TOKEN: ${{ secrets.SALESFORCE_QA_AUTH_TOKEN }}
+              run: |
+                  echo "${SALESFORCE_QA_AUTH_TOKEN}" > authFile.json
+
+            - name: Authenticate to ArcadiaQA
+              run: |
+                  sfdx auth:sfdxurl:store -f authFile.json -a ArcadiaQA
+
+            - name: Convert DX Code To Metadata API
+              run: |
+                  chmod -R +xr ./dx-utils
+                  #convert DX to legacy metadata
+                  ./dx-utils/convert_to_metadata.sh deploy force-app/ ""
+                  cp -pr deploy /tmp/artifacts/deploy
+
+            - name: Deploy to ArcadiaQA
+              run: |
+                  ./dx-utils/deploy.sh ArcadiaQA
+
+            - name: save auth file ArcadiaBaseQA
+              env:
+                  SALESFORCE_BASE_QA_AUTH_TOKEN: ${{ secrets.SALESFORCE_BASE_QA_AUTH_TOKEN }}
+              run: |
+                  echo "${SALESFORCE_BASE_QA_AUTH_TOKEN}" > baseAuthFile.json
+
+            - name: Authenticate to ArcadiaBaseQA
+              run: |
+                  sfdx auth:sfdxurl:store -f baseAuthFile.json -a ArcadiaBaseQA
+
+            - name: Deploy to ArcadiaBaseQA
+              run: |
+                  ./dx-utils/deploy.sh ArcadiaBaseQA
+
+            - name: packagability scan
+              run: |
+                  npm run mdcoverage -- -p deploy/package.xml -o unpackageable-components.json -t packageability.txt

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LastModifiedInUrjanet__c</fullName>
+    <description
+    >A custom field to store the date that the site was last modified in Arcadia&apos;s system.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date that the site was last modified in Arcadia&apos;s system.</inlineHelpText>
+    <label>Last Modified in Arcadia</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CorrelationID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>A unique number to identify this utility credential record within Urjanet&apos;s sytem.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>A unique number to identify this utility credential record within Urjanet&apos;s sytem.</inlineHelpText>
+    <label>Correlation ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>
